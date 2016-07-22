@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+	<!-- SEARCHBAR -->
+
+	<nav class="navbar navbar-default" id="searchbar">
+		 <div class="container">
+		    		<!-- Brand and toggle get grouped for better mobile display -->
+		    		
+			<div class="input-group" id="search">
+				<input type="text" class="form-control" placeholder="Search for...">
+				 <span class="input-group-btn">
+				    <button class="btn btn-default" type="button">Go!</button>
+				</span>
+			</div> <!-- /input-group -->
+
+		</div> <!-- /.container-fluid -->
+	</nav>
+
+	<!-- HEADER -->
+
+	<div class="container">
+		<div class="page-header">
+	  		<h1>Government Statistics</h1>
+		</div>
+	</div>
+
+	<!-- VERTICAL MENU -->
+	
+	<div class="container">
+		<div class="btn-group-vertical" role="group" aria-label="data-menu">
+		  	<button class="btn btn-default" type="button">Price</button>
+		  	<button class="btn btn-default" type="button">National Accounts</button>
+		  	<button class="btn btn-default" type="button">Green National Income</button>
+		  	<button class="btn btn-default" type="button">Family Income and Expenditure</button>
+		  	<button class="btn btn-default" type="button">Labor Force</button>
+		  	<button class="btn btn-default" type="button">Earnings and Productivity</button>
+		  	<button class="btn btn-default" type="button">Social Indicators</button>
+			<button class="btn btn-default" type="button">Social Security</button>
+		  	<button class="btn btn-default" type="button">National Well-Being Indicators</button>
+		  	<button class="btn btn-default" type="button">Industry and Services</button>
+		  	<button class="btn btn-default" type="button">Population and Housing</button>
+		  	<button class="btn btn-default" type="button">Agriculture</button>
+		</div>
+	</div>
+
+{% endblock %}

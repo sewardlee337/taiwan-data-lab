@@ -1,0 +1,65 @@
+.body { 
+    font-family: 'Roboto', sans-serif; 
+}
+
+.navbar {
+	margin-bottom: 0px;
+    position: relative;
+}
+
+.jumbotron {
+    margin-bottom: 0px;
+    background-image: url(../img/Taipeiskyline.jpg);
+    background-position: 60% 65%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    min-height: 400px;
+}
+
+#intro {
+	font-size: 120%;
+}
+
+#intro-title {
+	text-align: center;
+}
+
+#datatypes{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.fa {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.col-xs-6 {
+    text-align: center;
+}
+
+#searchbar {
+    background-color: #808080;
+    position: relative;
+    height: 75px;
+}
+
+#search {
+    position: relative;
+    margin-top: 20px;
+}
+
+.github-button {
+    margin-top: 12px;
+}
+
+
+#thank-you {
+    font-size: 120%;
+}
+
+.btn-default {
+    background-color: #E8E8E8;
+}
