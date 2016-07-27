@@ -63,3 +63,11 @@
 .btn-default {
     background-color: #E8E8E8;
 }
+
+#data-menu{
+    margin-left: -10px;
+}
+
+#data-display{
+    margin-right: -10px;
+}

@@ -1,0 +1,40 @@
+{% extends "data.html" %}
+
+{% block display %}
+
+<!-- CHART --> 
+
+		<canvas id="myChart" width="400" height="250"></canvas>		
+
+		<script>
+
+		// Define chart global properties
+
+		Chart.defaults.global.title.display = true;
+		Chart.defaults.global.title.text = "{{ chart_title }}";
+		Chart.defaults.global.legend.position = "bottom";
+
+		// Generate Chart
+
+		var ctx = document.getElementById("myChart");
+		var myChart = new Chart(ctx, {
+		    type: 'line',
+		    data: {{ data | tojson }},
+		    options: {
+		        scales: {
+		            yAxes: [{
+		                ticks: {
+		                    beginAtZero:true
+		                },
+		                scaleLabel: {
+		                	display: true,
+		                	labelString: "{{ yaxis }}"
+		                }
+		            }]
+		        }
+		    }
+		});
+
+		</script>	<!-- CLOSE CHART -->
+
+{% endblock %}

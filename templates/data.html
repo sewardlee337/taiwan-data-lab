@@ -6,17 +6,15 @@
 
 	<nav class="navbar navbar-default" id="searchbar">
 		 <div class="container">
-		    		<!-- Brand and toggle get grouped for better mobile display -->
-		    		
 			<div class="input-group" id="search">
 				<input type="text" class="form-control" placeholder="Search for...">
 				 <span class="input-group-btn">
 				    <button class="btn btn-default" type="button">Go!</button>
 				</span>
-			</div> <!-- /input-group -->
+			</div>
 
-		</div> <!-- /.container-fluid -->
-	</nav>
+		</div>
+	</nav>		<!-- CLOSE SEARCHBAR -->
 
 	<!-- HEADER -->
 
@@ -24,25 +22,123 @@
 		<div class="page-header">
 	  		<h1>Government Statistics</h1>
 		</div>
-	</div>
+	</div>		<!-- CLOSE HEADER -->
 
-	<!-- VERTICAL MENU -->
-	
-	<div class="container">
-		<div class="btn-group-vertical" role="group" aria-label="data-menu">
-		  	<button class="btn btn-default" type="button">Price</button>
-		  	<button class="btn btn-default" type="button">National Accounts</button>
-		  	<button class="btn btn-default" type="button">Green National Income</button>
-		  	<button class="btn btn-default" type="button">Family Income and Expenditure</button>
-		  	<button class="btn btn-default" type="button">Labor Force</button>
-		  	<button class="btn btn-default" type="button">Earnings and Productivity</button>
-		  	<button class="btn btn-default" type="button">Social Indicators</button>
-			<button class="btn btn-default" type="button">Social Security</button>
-		  	<button class="btn btn-default" type="button">National Well-Being Indicators</button>
-		  	<button class="btn btn-default" type="button">Industry and Services</button>
-		  	<button class="btn btn-default" type="button">Population and Housing</button>
-		  	<button class="btn btn-default" type="button">Agriculture</button>
-		</div>
+
+
+	<div class = "container">
+
+		<!-- VERTICAL MENU -->
+
+		<div class ="col-md-3">
+				<div class="btn-group-vertical" role="group" aria-label="data-menu" id = "data-menu">
+
+					<!-- Price -->
+				  	<div class="btn-group">
+		  			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Prices <span class="caret"></span></button>
+		  				<ul class="dropdown-menu">
+						    <li><a href="#">Consumer Price Indices</a></li>
+						    <li><a href="#">Wholesale Price Indices</a></li>
+						    <li><a href="#">Import Price Indices</a></li>
+						    <li><a href="#">Export Price Indices</a></li>
+						    <li><a href="#">Construction Cost Indices</a></li>
+		  				</ul>
+					</div>
+
+				  	<!-- National Accounts -->
+				  	<div class="btn-group">
+		  			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">National Accounts <span class="caret"></span></button>
+		  				<ul class="dropdown-menu">
+						    <li><a href="/data/natl-accounts-figs/graph">Principal Figures</a></li>
+						    <li><a href="/data/natl-accounts-activity/graph">GDP by Kind of Activity</a></li>
+						    <li><a href="#">GDP by Expenditures</a></li>
+						    <li><a href="#">GDP by Expenditures (Seasonally-Adjusted)</a></li>
+		  				</ul>
+					</div>
+
+					<!-- Green National Income -->
+					<div class="btn-group">
+		  			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Green National Income <span class="caret"></span></button>
+		  				<ul class="dropdown-menu">
+						    <li><a href="#">Air Pollution</a></li>
+						    <li><a href="#">Water Pollution</a></li>
+						    <li><a href="#">Solid Waste</a></li>
+						    <li><a href="#">Minerals, Earth, and Rocks Resources</a></li>
+						    <li><a href="#">Water Resources</a></li>
+		  				</ul>
+					</div>
+
+					<!-- Family Income and Expenditure -->
+				  	<div class="btn-group">
+		  			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Family Income and Expenditure <span class="caret"></span></button>
+		  				<ul class="dropdown-menu">
+						    <li><a href="#">Avg Family Income and Expenditure by Household Head Industry</a></li>
+						    <li><a href="#">Avg Family Income and Expenditure by Household Head Sex</a></li>
+						    <li><a href="#">Avg Family Income and Expenditure by Household Head Age</a></li>
+						    <li><a href="#">Avg Family Income and Expenditure by Household Head Education</a></li>
+						    <li><a href="#">No. of Households by Household Head Sex and Consumption Expenditure</a></li>
+						    <li><a href="#">Household Housing and Facilities by Household Head Occupation</a></li>
+						    <li><a href="#">Household Housing and Facilities by Family Type</a></li>
+						    <li><a href="#">Income Sources of Recipients by Industry</a></li>
+						    <li><a href="#">Income Sources of Recipients by Sex</a></li>
+						    <li><a href="#">Income Sources of Recipients by Age</a></li>
+						    <li><a href="#">Income Sources of Recipients by Education Level</a></li>
+		  				</ul>
+					</div>
+
+					<!-- Labor Force -->
+				  	<div class="btn-group">
+		  			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Labor Force <span class="caret"></span></button>
+		  				<ul class="dropdown-menu">
+						    <li><a href="#">Major Indicators</a></li>
+						    <li><a href="/data/labor-employment-edu/graph">Employment by Sex, Education Attainment</a></li>
+						    <li><a href="/data/labor-employment-age/graph">Employment by Age</a></li>
+						    <li><a href="/data/labor-employment-industry/graph">Employment by Industry</a></li>
+						    <li><a href="/data/labor-employment-occupation/graph">Employment by Occupation</a></li>
+						    <li><a href="#">Employment by Class of Workers</a></li>
+						    <li><a href="#">Unemployment by Sex, Eduation Attainment</a></li>
+						    <li><a href="#">Unemployment by Age</a></li>
+						    <li><a href="#">Unemployment by Reason</a></li>
+						    <li><a href="#">Not in Labor Force</a></li>
+		  				</ul>
+					</div>
+
+
+				  	<button class="btn btn-default" type="button">Earnings and Productivity</button>
+				  	<button class="btn btn-default" type="button">Social Indicators</button>
+					<button class="btn btn-default" type="button">Social Security</button>
+				  	<button class="btn btn-default" type="button">Industry and Services</button>
+				  	<button class="btn btn-default" type="button">Population and Housing</button>
+				  	<button class="btn btn-default" type="button">Agriculture</button>
+				</div>
+		</div>		<!-- CLOSE VERTICAL MENU -->
+
+
+		<!-- TABS -->
+
+		<div class="container">
+		<div class ="col-md-9">
+				<ul class="nav nav-tabs" id ="data-display">
+			  		<li role="presentation" class="active"><a href="#">Graph</a></li>
+			  		<li role="presentation"><a href="#">Data</a></li>
+			  		<li role="presentation"><a href="#">Details</a></li>
+				</ul>	
+
+				<br>
+				<br>
+
+
+		{% block display %} {% endblock %}
+
+
+
+      	<br>
+      	<br>
+      	<br>
+			</div>
+		</div>		<!-- CLOSE TABS -->
+
+
 	</div>
 
 {% endblock %}
