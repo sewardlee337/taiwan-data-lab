@@ -49,8 +49,8 @@
 				  	<div class="btn-group">
 		  			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">National Accounts <span class="caret"></span></button>
 		  				<ul class="dropdown-menu">
-						    <li><a href="/data/natl-accounts-figs/graph">Principal Figures</a></li>
-						    <li><a href="/data/natl-accounts-activity/graph">GDP by Kind of Activity</a></li>
+						    <li><a href="/data/natl-accounts-figs">Principal Figures</a></li>
+						    <li><a href="/data/natl-accounts-activity">GDP by Kind of Activity</a></li>
 						    <li><a href="#">GDP by Expenditures</a></li>
 						    <li><a href="#">GDP by Expenditures (Seasonally-Adjusted)</a></li>
 		  				</ul>
@@ -91,15 +91,19 @@
 		  			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Labor Force <span class="caret"></span></button>
 		  				<ul class="dropdown-menu">
 						    <li><a href="#">Major Indicators</a></li>
-						    <li><a href="/data/labor-employment-edu/graph">Employment by Sex, Education Attainment</a></li>
-						    <li><a href="/data/labor-employment-age/graph">Employment by Age</a></li>
-						    <li><a href="/data/labor-employment-industry/graph">Employment by Industry</a></li>
-						    <li><a href="/data/labor-employment-occupation/graph">Employment by Occupation</a></li>
-						    <li><a href="/data/labor-employment-class/graph">Employment by Class of Workers</a></li>
-						    <li><a href="/data/labor-unemployment-edu/graph">Unemployment by Sex, Eduation Attainment</a></li>
-						    <li><a href="/data/labor-unemployment-age/graph">Unemployment by Age</a></li>
-						    <li><a href="/data/labor-unemployment-reason/graph">Unemployment by Reason</a></li>
-						    <li><a href="#">Not in Labor Force</a></li>
+						    <li><a href="/data/labor-employment-edu">Employment by Sex, Education Attainment</a></li>
+						    <li><a href="/data/labor-employment-age">Employment by Age</a></li>
+						    <li><a href="/data/labor-employment-industry">Employment by Industry</a></li>
+						    <li><a href="/data/labor-employment-occupation">Employment by Occupation</a></li>
+						    <li><a href="/data/labor-employment-class">Employment by Class of Workers</a></li>
+						    <li><a href="/data/labor-unemployment-edu">Unemployment by Sex, Eduation Attainment</a></li>
+						    <li><a href="/data/labor-unemployment-age">Unemployment by Age</a></li>
+						    <li><a href="/data/labor-unemployment-reason">Unemployment by Reason</a></li>
+						    <li><a href="/data/labor-notlaborforce">Not in Labor Force</a></li>
+						    <li><a href="/data/labor-participation-edu">Labor Force Participation Rate by Sex, Education Attainment</a></li>
+						    <li><a href="/data/labor-participation-age">Labor Force Participation Rate by Age</a></li>
+						    <li><a href="/data/labor-unemploymentrate-edu">Unemployment Rate by Sex, Education Attainment</a></li>
+						    <li><a href="/data/labor-unemploymentrate-age">Unemployment Rate by Age</a></li>
 		  				</ul>
 					</div>
 
@@ -112,22 +116,8 @@
 				</div>
 		</div>		<!-- CLOSE VERTICAL MENU -->
 
-
-		<!-- TABS -->
-
-		<div class="container">
-		<div class ="col-md-9">
-				<ul class="nav nav-tabs" id ="data-display">
-			  		<li role="presentation" class="active"><a href="#">Graph</a></li>
-			  		<li role="presentation"><a href="#">Data</a></li>
-			  		<li role="presentation"><a href="#">Details</a></li>
-				</ul>	
-
-				<br>
-				<br>
-
-
 		{% block display %} {% endblock %}
+
 
 
 

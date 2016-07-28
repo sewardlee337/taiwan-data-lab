@@ -30,9 +30,8 @@ colors = {
 }
 
 edu = {
-	'A': 'Total', 'B': 'Male', 'C': 'Female', 'D': 'Primary school & below',
-	'E': 'Junior high', 'F': 'Senior high', 'G': 'Vocational',
-	'H': 'Junior college', 'I': 'University & graduate school'
+	'A': 'Total', 'B': 'Male', 'C': 'Female', 'D': 'Primary school & below', 'E': 'Junior high', 
+	'F': 'Senior high', 'G': 'Vocational', 'H': 'Junior college', 'I': 'University & graduate school'
 }
 
 age = {
@@ -50,4 +49,9 @@ labor_unemploy_reason = {
 	'A': 'Total', 'B': 'New job seeker', 'C': 'Business shrunk or establishment closed', 'D': 'Not satisfied with job', 'E': 'Ill health',
 	'F': 'Seasonal or temporary work completed', 'G': 'Female got married or gavve birth', 'H': 'Retirement', 'I': 'Busy in housekeeping',
 	'L': 'Other'
+}
+
+labor_notlaborforce = {
+	'A': 'Total', 'B': 'Intend and available to work, but not seeking', 'C': 'Attending school or preparing for entrance exams',
+	'D': 'Housekeeping', 'E': 'Old age & disabled', 'F': 'Other'
 }
