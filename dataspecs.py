@@ -29,14 +29,25 @@ colors = {
 	'S': 'rgba(77, 77, 77, %s)',
 }
 
-labor_employ_edu = {
+edu = {
 	'A': 'Total', 'B': 'Male', 'C': 'Female', 'D': 'Primary school & below',
 	'E': 'Junior high', 'F': 'Senior high', 'G': 'Vocational',
 	'H': 'Junior college', 'I': 'University & graduate school'
 }
 
-labor_employ_age = {
-	'A': 'Total', 'B': '15 ~ 19 years', 'C': '20 ~ 24 years', 'D': '25 ~ 29 years',
+age = {
+	'B': '15 ~ 19 years', 'C': '20 ~ 24 years', 'D': '25 ~ 29 years',
 	'E': '30 ~ 34 years', 'F': '35 ~ 39 years', 'G': '40 ~ 44 years', 'H': '45 ~ 49 years', 
 	'I': '50 ~ 54 years', 'J': '55 ~ 59 years', 'K': '60 ~ 64 years', 'L': '65 years & older'
+}
+
+labor_employ_class = {
+	'A': 'Total', 'B': 'Employers', 'C': 'Own-account workers', 'D': 'Unpaid family workers', 
+	'E': 'Paid employees - Private', 'F': 'Paid employees - Government'
+}
+
+labor_unemploy_reason = {
+	'A': 'Total', 'B': 'New job seeker', 'C': 'Business shrunk or establishment closed', 'D': 'Not satisfied with job', 'E': 'Ill health',
+	'F': 'Seasonal or temporary work completed', 'G': 'Female got married or gavve birth', 'H': 'Retirement', 'I': 'Busy in housekeeping',
+	'L': 'Other'
 }

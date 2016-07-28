@@ -22,7 +22,7 @@ def get_sqldata(my_query):
 	con.close()
 
 
-####	DATA STRUCTURES FOR CHART.JS 		####
+####	DATA STRUCTURES FOR CHARTjs 	####
 
 data_dict = {'fill': False, 
 			            'lineTension': 0.1,			            			      
@@ -54,10 +54,10 @@ def chartjs_input(metrics_dict, sql_rows, chart_title, yaxis):
 	data['labels'] = labels
 	all_datasets = list()
 
-	for key in metrics_dict:								#	This for-loop extracts all the datasets that you want graphed
+	for key in metrics_dict:
 
 		dataset = list()
-		for row in sql_rows:								#	Use loop to extract relevant dataset from SQL query output
+		for row in sql_rows:
 			dataset.append(row[key])
 
 		dataset_contents = data_dict						
@@ -68,7 +68,7 @@ def chartjs_input(metrics_dict, sql_rows, chart_title, yaxis):
 		dataset_contents['pointHoverBackgroundColor'] = dataspecs.colors[key] %'1'
 		dataset_contents['data'] = dataset					
 
-		all_datasets.append(copy.copy(dataset_contents))	#	Append current dataset
+		all_datasets.append(copy.copy(dataset_contents))
 
 	data['datasets'] = all_datasets		
 
@@ -96,7 +96,7 @@ def datapage():
 	return render_template('data.html')
 
 
-@app.route("/data/natl-accounts-figs/graph")				
+@app.route("/data/natl-accounts-figs/graph")
 def natl_accounts_figs():
 	rows = get_sqldata('select year, round(ngdp / deflator, 0) as rgdp from accounts_figs')
 
@@ -123,34 +123,47 @@ def natl_accounts_figs():
 @app.route("/data/natl-accounts-activity/graph")
 def national_accounts_activity():
 	rows = get_sqldata("select * from accounts_activity where metric = 'rGDP'")
-
 	return chartjs_input(dataspecs.industry, rows, "National Accounts: GDP by Production Activity", "Chained (2011) Dollars, Millions NT$")
 
 @app.route("/data/labor-employment-edu/graph")
 def labor_employment_edu():
 	rows = get_sqldata("select * from labor_employ_edu where month = 'Ave.'")
-
-	return chartjs_input(dataspecs.labor_employ_edu, rows, "Labor Force: Employment by Sex and Education Attainment", "Thousands of persons")
+	return chartjs_input(dataspecs.edu, rows, "Labor Force: Employment by Sex and Education Attainment", "Thousands of persons")
 
 @app.route("/data/labor-employment-age/graph")
 def labor_employment_age():
 	rows = get_sqldata("select * from labor_employ_age where month = 'Ave.'")
-
-	return chartjs_input(dataspecs.labor_employ_age, rows, "Labor Force: Employment by Age", "Thousands of persons")
+	return chartjs_input(dataspecs.age, rows, "Labor Force: Employment by Age", "Thousands of persons")
 
 @app.route("/data/labor-employment-industry/graph")
 def labor_employment_industry():
 	rows = get_sqldata("select * from labor_employ_industry where month = 'Ave.'")
-
 	return chartjs_input(dataspecs.industry, rows, "Labor Force: Employment by Industry", "Thousands of persons")
 
 @app.route("/data/labor-employment-occupation/graph")
 def labor_employment_occupation():
 	rows = get_sqldata("select * from labor_employ_occupation where month = 'Ave.'")
-
 	return chartjs_input(dataspecs.occupation, rows, "Labor Force: Employment by Occupation", "Thousands of persons")	
 
+@app.route("/data/labor-employment-class/graph")
+def labor_employment_class():
+	rows = get_sqldata("select * from labor_employ_class where month = 'Ave.'")
+	return chartjs_input(dataspecs.labor_employ_class, rows, "Labor Force: Employment by Class of Workers", "Thousands of persons")
 
+@app.route("/data/labor-unemployment-edu/graph")
+def labor_unemployment_edu():
+	rows = get_sqldata("select * from labor_unemploy_edu where month = 'Ave.'")
+	return chartjs_input(dataspecs.edu, rows, "Labor Force: Unemployment by Sex and Education Attainment", "Thousands of persons")
+
+@app.route("/data/labor-unemployment-age/graph")
+def labor_unemployment_age():
+	rows = get_sqldata("select * from labor_unemploy_age where month = 'Ave.'")
+	return chartjs_input(dataspecs.age, rows, "Labor Force: Unemployment by Age", "Thousands of persons")
+
+@app.route("/data/labor-unemployment-reason/graph")
+def labor_unemployment_reason():
+	rows = get_sqldata("select * from labor_unemploy_age where month = 'Ave.'")
+	return chartjs_input(dataspecs.labor_unemploy_reason, rows, "Labor Force: Unemployment by Reason", "Thousands of persons")
 
 if __name__ == "__main__":
 	app.run()
