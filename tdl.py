@@ -189,8 +189,25 @@ def labor_unemploymentrate_age():
 	rows = get_sqldata("select * from labor_unemployrate_age where month = 'Ave.'")
 	return chartjs_input(dataspecs.age, rows, "Labor Force: Unemployment Rate by Age", "Percent (%)")
 
+@app.route("/data/green-air")
+def green_air():
+	rows = get_sqldata("select * from green_air")
+	return chartjs_input(dataspecs.green_air, rows, "Emmission Account of Pollution", "Tons")
 
+@app.route("/data/social-population")
+def social_population():
+	rows = get_sqldata("select * from social_pop")
+	return chartjs_input(dataspecs.sex, rows, "Population Composition by Sex", "Thousands of persons")
 
+@app.route("/data/price-index")
+def price_index():
+	rows = get_sqldata("select * from price_index")
+	return chartjs_input(dataspecs.price_index, rows, "Price Indices (N.T.D. Basis)", "Base Period: 2011 = 100")
+
+@app.route("/data/price-index-change")
+def price_index_change():
+	rows = get_sqldata("select * from price_index_change")
+	return chartjs_input(dataspecs.price_index, rows, "Annual Change of Price Indices (N.T.D. Basis)", "Percent (%)")
 
 @app.route("/test")
 def testpage():

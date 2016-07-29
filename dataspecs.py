@@ -35,7 +35,7 @@ edu = {
 }
 
 age = {
-	'B': '15 ~ 19 years', 'C': '20 ~ 24 years', 'D': '25 ~ 29 years',
+	'A': 'Total', 'B': '15 ~ 19 years', 'C': '20 ~ 24 years', 'D': '25 ~ 29 years',
 	'E': '30 ~ 34 years', 'F': '35 ~ 39 years', 'G': '40 ~ 44 years', 'H': '45 ~ 49 years', 
 	'I': '50 ~ 54 years', 'J': '55 ~ 59 years', 'K': '60 ~ 64 years', 'L': '65 years & older'
 }
@@ -54,4 +54,17 @@ labor_unemploy_reason = {
 labor_notlaborforce = {
 	'A': 'Total', 'B': 'Intend and available to work, but not seeking', 'C': 'Attending school or preparing for entrance exams',
 	'D': 'Housekeeping', 'E': 'Old age & disabled', 'F': 'Other'
+}
+
+green_air ={
+	'A': 'Total', 'B': 'TSP (including PM2.5)', 'C': 'PM2.5', 'D': 'SOx', 'E': 'NOx', 'F': 'NMHC', 'G': 'CO', 'H': 'Pb'
+}
+
+sex = {
+	'A': 'Total', 'B': 'Male', 'C': 'Female'
+}
+
+price_index = {
+	'A': 'Export Price Index', 'B': 'Construction Price Index', 'C': 'Consumer Price Index', 'D': 'Wholesale Price Index', 
+	'E': 'Import Price Index' 
 }
