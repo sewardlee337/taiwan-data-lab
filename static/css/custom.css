@@ -17,7 +17,7 @@
     min-height: 400px;
 }
 
-#intro {
+#text-content {
 	font-size: 120%;
 }
 
@@ -55,10 +55,6 @@
     margin-top: 12px;
 }
 
-
-#thank-you {
-    font-size: 120%;
-}
 
 .btn-default {
     background-color: #E8E8E8;

@@ -4,6 +4,7 @@ Taiwan Data Lab is a web application designed to make Taiwan data accessible and
 
 This project is built using:
 * [Flask](http://flask.pocoo.org/) - Python web framework
-* [Chart.js](http://www.chartjs.org/) - JavaScript plug-in for data visualization 
+* [Chart.js](http://www.chartjs.org/) - JavaScript plug-in for data visualization
+* [DataTables](https://www.datatables.net/) - Table plug-in for jQuery
 * [SQLite](https://www.sqlite.org/) - Embedded SQL database engine 
 * [Bootstrap](http://getbootstrap.com/) - HTML, CSS, JavaScript framework for responsive webpages

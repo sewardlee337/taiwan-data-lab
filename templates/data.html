@@ -86,7 +86,6 @@
 				  	<div class="btn-group">
 		  			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Labor Force <span class="caret"></span></button>
 		  				<ul class="dropdown-menu">
-						    <li><a href="#">Major Indicators</a></li>
 						    <li><a href="/data/labor-employment-edu">Employment by Sex, Education Attainment</a></li>
 						    <li><a href="/data/labor-employment-age">Employment by Age</a></li>
 						    <li><a href="/data/labor-employment-industry">Employment by Industry</a></li>
@@ -121,6 +120,8 @@
 				  	<button class="btn btn-default" type="button">Agriculture</button>
 				</div>
 		</div>		<!-- CLOSE VERTICAL MENU -->
+
+		<p id= "text-content"> {{ description }} </p>
 
 		{% block display %} {% endblock %}
 
