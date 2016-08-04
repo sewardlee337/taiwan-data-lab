@@ -7,25 +7,45 @@
 		<div class="container">
 		<div class ="col-md-9">
 				<ul class="nav nav-tabs" id ="data-display">
-			  		<li role="presentation"><a href="#">Graph</a></li>
-			  		<li role="presentation" class="active"><a href="/test">Data</a></li>
-			  		<li role="presentation"><a href="#">Details</a></li>
+			  		<li role="presentation">
+			  			
+			  			<script>
+
+							var current_url = window.location.href
+							var new_url = current_url.replace("/table", "")
+
+							document.write('<a href="' + new_url  + '"> Graph </a>');
+
+						</script>
+
+			  		</li>
+			  		<li role="presentation" class="active"><a href="">Data</a></li>
 				</ul>	
 
 				<br>
 				<br>
-
-				<p><strong> Units: {{ units }} </strong></p>
+				<p><strong>{{ title }}</strong></p>
+				<p><em> Units: {{ units }} </em></p>
 
 				<br>
 
 		<script>
 
-			$(document).ready( function () {
-    			$('#datatable').DataTable();
+			$(document).ready(function() {
+    			$('#datatable').DataTable( {
+    				"scrollX": true,
+        			dom: 'Bfrtip',
+			        buttons: [
+			            'copyHtml5',
+			            'excelHtml5',
+			            'csvHtml5',
+			        ]
+    			} );
 			} );
 			
 		</script>
+
+
 
 
 		<table id="datatable" class="display" width="100%" cellspacing="0">
