@@ -19,6 +19,13 @@ data_dict = {'fill': False,
 			        }
 
 
+gdp = {
+	'G': 'GDP', 'A': 'Private Final Consumption Expenditure', 'B': 'Government Final Consumption Expenditure',
+	'C': 'Gross Fixed Capital Formation', 'D': 'Changes in Inventories', 'E': 'Exports of Goods and Services',
+	'F': 'Imports of Goods and Services'	
+}
+
+
 
 industry = {
 	'A': 'Agriculture, Forestry, Fishing, Animal Husbandry', 'B': 'Mining and Quarrying',
@@ -29,6 +36,18 @@ industry = {
 	'M': 'Professional, Scientific, Technical Services', 'N': 'Support Services',
 	'O': 'Public Administration and Defense; Compulsory Social Security', 'P': 'Education', 
 	'Q': 'Human, Health, Social Work Services', 'R': 'Arts, Entertainment, Recreation', 'S': 'Other Services'
+}
+
+activity = {
+	'A': 'Total GDP', 'B': 'Total GDP (production approach)', 'C': 'Agriculture, Forestry, Fishing, Animal Husbandry', 'D': 'Mining and Quarrying',
+	'E': 'Manufacturing', 'F': 'Electricity and Gas Supply', 'G': 'Water Supply and Remediation Services',
+	'H': 'Construction', 'I': 'Wholesale and Retail Trade', 'J': 'Transportation and Storage',
+	'K': 'Accomodation and Food Storage', 'L': 'Information and Communication', 
+	'M': 'Finance and Insurance', 'N': 'Real Estate and Ownership of Dwellings',
+	'O': 'Professional, Scientific, Technical Services', 'P': 'Support Services',
+	'Q': 'Public Administration and Defense; Compulsory Social Security', 'R': 'Education', 
+	'S': 'Human, Health, Social Work Services', 'T': 'Arts, Entertainment, Recreation', 'U': 'Other Services',
+	'V': 'Import Duties', 'W': 'Value-Added Tax'
 }
 
 occupation = {
@@ -44,7 +63,8 @@ colors = {
 	'J': 'rgba(96, 189, 104, %s)', 'K': 'rgba(93, 165, 218, %s)', 'L': 'rgba(77, 77, 77, %s)',
 	'M': 'rgba(250, 164, 58, %s)', 'N': 'rgba(241, 124, 176, %s)', 'O': 'rgba(241, 88, 84, %s)',
 	'P': 'rgba(178, 118, 178, %s)', 'Q': 'rgba(96, 189, 104, %s)', 'R': 'rgba(93, 165, 218, %s)',
-	'S': 'rgba(77, 77, 77, %s)',
+	'S': 'rgba(77, 77, 77, %s)', 'T': 'rgba(250, 164, 58, %s)', 'U': 'rgba(241, 124, 176, %s)',
+	'V': 'rgba(241, 88, 84, %s)', 'W': 'rgba(178, 118, 178, %s)'
 }
 
 edu = {
@@ -65,8 +85,8 @@ labor_employ_class = {
 
 labor_unemploy_reason = {
 	'A': 'Total', 'B': 'New job seeker', 'C': 'Business shrunk or establishment closed', 'D': 'Not satisfied with job', 'E': 'Ill health',
-	'F': 'Seasonal or temporary work completed', 'G': 'Female got married or gavve birth', 'H': 'Retirement', 'I': 'Busy in housekeeping',
-	'L': 'Other'
+	'F': 'Seasonal or temporary work completed', 'G': 'Female got married or gave birth', 'H': 'Retirement', 'I': 'Busy in housekeeping',
+	'J': 'Other'
 }
 
 labor_notlaborforce = {

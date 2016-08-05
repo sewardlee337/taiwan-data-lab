@@ -25,7 +25,7 @@
 	text-align: center;
 }
 
-#datatypes{
+#datatypes {
     padding-top: 50px;
     padding-bottom: 50px;
 }
@@ -60,10 +60,14 @@
     background-color: #E8E8E8;
 }
 
-#data-menu{
+#data-menu {
     margin-left: -10px;
 }
 
-#data-display{
+#data-display {
     margin-right: -10px;
+}
+
+#pagetitle {
+    color: #FCFCFC;
 }

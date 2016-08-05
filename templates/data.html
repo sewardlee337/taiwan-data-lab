@@ -2,27 +2,23 @@
 {% block content %}
 
 
-	<!-- SEARCHBAR -->
+	<!-- TITLE BAR -->
 
 	<nav class="navbar navbar-default" id="searchbar">
 		 <div class="container">
-			<div class="input-group" id="search">
-				<input type="text" class="form-control" placeholder="Search for...">
-				 <span class="input-group-btn">
-				    <button class="btn btn-default" type="button">Go!</button>
-				</span>
-			</div>
+			<h2 id = "pagetitle"> Government Data</h2>
 
 		</div>
-	</nav>		<!-- CLOSE SEARCHBAR -->
+	</nav>		<!-- CLOSE TITLE BAR -->
 
-	<!-- HEADER -->
+	 
 
 	<div class="container">
-		<div class="page-header">
-	  		<h1>Government Statistics</h1>
-		</div>
-	</div>		<!-- CLOSE HEADER -->
+		
+	  	<br>
+	  	<br>	
+		
+	</div>		
 
 
 
@@ -46,9 +42,10 @@
 				  	<div class="btn-group">
 		  			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">National Accounts <span class="caret"></span></button>
 		  				<ul class="dropdown-menu">
-						    <li><a href="/data/natl-accounts-figs">Principal Figures</a></li>
-						    <li><a href="/data/natl-accounts-activity">GDP by Kind of Activity</a></li>
-						    <li><a href="#">GDP by Expenditures</a></li>
+		  					<li><a href="/data/natlaccounts-ngdp">GDP (nominal)</a></li>
+		  					<li><a href = "/data/natlaccounts-rgdp">GDP (real)</a></li>
+						    <li><a href="/data/natlaccounts-ngdp-activity">GDP by Activity (nominal)</a></li>
+						    <li><a href="/data/natlaccounts-rgdp-activity">GDP by Activity (real)</a></li>
 		  				</ul>
 					</div>
 
@@ -91,7 +88,7 @@
 						    <li><a href="/data/labor-employment-industry">Employment by Industry</a></li>
 						    <li><a href="/data/labor-employment-occupation">Employment by Occupation</a></li>
 						    <li><a href="/data/labor-employment-class">Employment by Class of Workers</a></li>
-						    <li><a href="/data/labor-unemployment-edu">Unemployment by Sex, Eduation Attainment</a></li>
+						    <li><a href="/data/labor-unemployment-edu">Unemployment by Sex, Education Attainment</a></li>
 						    <li><a href="/data/labor-unemployment-age">Unemployment by Age</a></li>
 						    <li><a href="/data/labor-unemployment-reason">Unemployment by Reason</a></li>
 						    <li><a href="/data/labor-notlaborforce">Not in Labor Force</a></li>
@@ -128,7 +125,6 @@
 
 
 
-      	<br>
       	<br>
       	<br>
 			</div>
