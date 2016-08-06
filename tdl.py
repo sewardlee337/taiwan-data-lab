@@ -32,7 +32,7 @@ def datapage():
 @app.route("/data/natlaccounts-ngdp")
 def natlaccounts_ngdp():
 	rows = dataquery.get_sqldata("select * from accounts_ngdp")
-	return dataquery.chartjs_input(dataspecs.gdp, rows, "National Accounts: GDP (nominal)",
+	return dataquery.chartjs_input(dataspecs.gdp, rows, "National Accounts: GDP by Expenditure (nominal)",
 		"Million NT$, current prices", "/data/natlaccounts-ngdp/table")
 
 @app.route("/data/natlaccounts-ngdp/table")
@@ -40,14 +40,14 @@ def natlaccounts_ngdp_tab():
 	colnames = dataquery.get_colnames('accounts_ngdp', dataspecs.gdp)
 	rows = dataquery.get_sqldata("select * from accounts_ngdp")
 	return render_template('table.html', units = "Million NT$, current prices", colnames = colnames, rows = rows,
-		title = "National Accounts: GDP (nominal)")
+		title = "National Accounts: GDP by Expenditure (nominal)", source = "http://bit.ly/2aFohZ5")
 
 
 ####	National Accounts: GDP (real)
 @app.route("/data/natlaccounts-rgdp")
 def natlaccounts_rgdp():
 	rows = dataquery.get_sqldata("select * from accounts_rgdp")
-	return dataquery.chartjs_input(dataspecs.gdp, rows, "National Accounts: GDP (real)",
+	return dataquery.chartjs_input(dataspecs.gdp, rows, "National Accounts: GDP by Expenditure (real)",
 		"Million NT$, chained 2011 dollars", "/data/natlaccounts-rgdp/table")
 
 @app.route("/data/natlaccounts-rgdp/table")
@@ -55,7 +55,7 @@ def natlaccounts_rgdp_tab():
 	colnames =dataquery.get_colnames('accounts_rgdp', dataspecs.gdp)
 	rows = dataquery.get_sqldata("select * from accounts_rgdp")
 	return render_template('table.html', units = "Million NT$, chained 2011 dollars", colnames = colnames, rows = rows,
-		title = "National Accounts: GDP (real)")
+		title = "National Accounts: GDP by Expenditure (real)", source = "http://bit.ly/2aFohZ5")
 
 
 ####	National Accounts: GDP by Activity (nominal)
@@ -70,7 +70,7 @@ def natlaccounts_ngdp_activity_tab():
 	colnames = dataquery.get_colnames('accounts_ngdp_activity', dataspecs.activity)
 	rows = dataquery.get_sqldata("select * from accounts_ngdp_activity")
 	return render_template('table.html', units = "Million NT$, current prices", colnames = colnames, rows = rows,
-		title = "National Accounts: GDP by Activity (nominal)")
+		title = "National Accounts: GDP by Activity (nominal)", source = "http://bit.ly/2aFohZ5")
 
 
 ####	National Accounts: GDP by Activity (real)
@@ -85,7 +85,7 @@ def natlaccounts_rgdp_activity_tab():
 	colnames = dataquery.get_colnames('accounts_rgdp_activity', dataspecs.activity)
 	rows = dataquery.get_sqldata("select * from accounts_rgdp_activity")
 	return render_template('table.html', units = "Million NT$, chained 2011 dollars", colnames = colnames, rows = rows,
-		title = "National Accounts: GDP by Activity (real)")
+		title = "National Accounts: GDP by Activity (real)", source = "http://bit.ly/2aFohZ5")
 
 
 ####	Labor Force: Employment by Sex and Educational Attainment
@@ -100,7 +100,7 @@ def labor_employment_edu_tab():
 	colnames = dataquery.get_colnames('labor_employ_edu', dataspecs.edu)
 	rows = dataquery.get_sqldata("select * from labor_employ_edu")
 	return render_template('table.html', units = 'Thousands of persons', colnames = colnames, rows = rows, 
-		title = "Labor Force: Employment by Sex and Education Attainment")
+		title = "Labor Force: Employment by Sex and Education Attainment", source = "http://bit.ly/2b0r2qk")
 
 
 ####	Labor Force: Employment by Age
@@ -115,7 +115,7 @@ def labor_employment_age_tab():
 	colnames = dataquery.get_colnames('labor_employ_age', dataspecs.age)
 	rows = dataquery.get_sqldata("select * from labor_employ_age")
 	return render_template('table.html', units = 'Thousands of persons', colnames = colnames, rows = rows,
-		title = "Labor Force: Employment by Age")
+		title = "Labor Force: Employment by Age", source = "http://bit.ly/2b0r2qk")
 
 
 ####	Labor Force: Employment by Industry
@@ -130,7 +130,7 @@ def labor_employment_industry_tab():
 	colnames = dataquery.get_colnames("labor_employ_industry", dataspecs.industry)
 	rows = dataquery.get_sqldata("select * from labor_employ_industry")
 	return render_template('table.html', units = 'Thousands of persons', colnames = colnames, rows = rows,
-		title = "Labor Force: Employment by Industry")
+		title = "Labor Force: Employment by Industry", source = "http://bit.ly/2b0r2qk")
 
 
 ####	Labor Force: Employment by Occupation
@@ -145,7 +145,7 @@ def labor_employment_occupation_tab():
 	colnames = dataquery.get_colnames("labor_employ_occupation", dataspecs.occupation)
 	rows = dataquery.get_sqldata("select * from labor_employ_occupation")
 	return render_template('table.html', units = "Thousands of persons", colnames = colnames, rows = rows,
-		title = "Labor Force: Employment by Occupation")
+		title = "Labor Force: Employment by Occupation", source = "http://bit.ly/2b0r2qk")
 
 
 ####	Labor Force: Employment by Class
@@ -160,7 +160,7 @@ def labor_employment_class_tab():
 	colnames = dataquery.get_colnames("labor_employ_class", dataspecs.labor_employ_class)
 	rows = dataquery.get_sqldata("select * from labor_employ_class")
 	return render_template('table.html', units = "Thousands of persons", colnames = colnames, rows = rows,
-		title = "Labor Force: Employment by Class")
+		title = "Labor Force: Employment by Class", source = "http://bit.ly/2b0r2qk")
 
 
 ####	Labor Force: Unemployment by Sex and Education Attainment
@@ -175,7 +175,7 @@ def labor_unemployment_edu_tab():
 	colnames = dataquery.get_colnames("labor_employ_edu", dataspecs.edu)
 	rows = dataquery.get_sqldata("select * from labor_employ_edu")
 	return render_template('table.html', units = "Thousands of persons", colnames = colnames, rows = rows,
-		title = "Labor Force: Unemployment by Sex and Education Attainment")
+		title = "Labor Force: Unemployment by Sex and Education Attainment", source = "http://bit.ly/2b0r2qk")
 
 
 ####	Labor Force: Unemployment by Age
@@ -190,7 +190,7 @@ def labor_unemployment_age_tab():
 	colnames = dataquery.get_colnames("labor_unemploy_age", dataspecs.age)
 	rows = dataquery.get_sqldata("select * from labor_unemploy_age")
 	return render_template('table.html', units = "Thousands of persons", colnames = colnames, rows = rows,
-		title = "Labor Force: Unemployment by Age")
+		title = "Labor Force: Unemployment by Age", source = "http://bit.ly/2b0r2qk")
 
 
 ####	Labor Force: Unemployment by Reason
@@ -205,7 +205,7 @@ def labor_unemployment_reason_tab():
 	colnames = dataquery.get_colnames("labor_unemploy_reason", dataspecs.labor_unemploy_reason)
 	rows = dataquery.get_sqldata("select * from labor_unemploy_reason")
 	return render_template('table.html', units = "Thousands of persons", colnames = colnames, rows = rows,
-		title = "Labor Force: Unemployment by Reason")
+		title = "Labor Force: Unemployment by Reason", source = "http://bit.ly/2b0r2qk")
 
 
 ####	Labor Force: Not in Labor Force
@@ -220,7 +220,7 @@ def labor_notlaborforce_tab():
 	colnames = dataquery.get_colnames("labor_notlaborforce", dataspecs.labor_notlaborforce)
 	rows = dataquery.get_sqldata("select * from labor_notlaborforce")
 	return render_template('table.html', units = "Thousands of persons", colnames = colnames, rows = rows,
-		title = "Labor Force: Not in Labor Force")
+		title = "Labor Force: Not in Labor Force", source = "http://bit.ly/2b0r2qk")
 
 
 ####	Labor Force: Labor Force Participation Rate by Sex, Education Attainment
@@ -234,8 +234,8 @@ def labor_participation_edu():
 def labor_participation_edu_tab():
 	colnames = dataquery.get_colnames("labor_participation_edu", dataspecs.edu)
 	rows = dataquery.get_sqldata("select * from labor_participation_edu")
-	return render_template('table.html', units = "Thousands of persons", colnames = colnames, rows = rows,
-		title = "Labor Force: Labor Force Participation Rate by Sex, Education Attainment")
+	return render_template('table.html', units = "Percent (%)", colnames = colnames, rows = rows,
+		title = "Labor Force: Labor Force Participation Rate by Sex, Education Attainment", source = "http://bit.ly/2b0r2qk")
 
 
 ####	Labor Force: Labor Force Participation Rate by Age
@@ -249,8 +249,8 @@ def labor_participation_age():
 def labor_participation_age_tab():
 	colnames = dataquery.get_colnames("labor_participation_age", dataspecs.age)
 	rows = dataquery.get_sqldata("select * from labor_participation_age")
-	return render_template('table.html', units = "Thousands of persons", colnames = colnames, rows = rows,
-		title = "Labor Force: Labor Force Participation by Age")
+	return render_template('table.html', units = "Percent (%)", colnames = colnames, rows = rows,
+		title = "Labor Force: Labor Force Participation by Age", source = "http://bit.ly/2b0r2qk")
 
 
 ####	Labor Force: Unemployment Rate by Sex, Educational Attainment
@@ -264,8 +264,8 @@ def labor_unemploymentrate_edu():
 def labor_unemploymentrate_edu_tab():
 	colnames = dataquery.get_colnames("labor_unemployrate_edu", dataspecs.edu)
 	rows = dataquery.get_sqldata("select * from labor_unemployrate_edu")
-	return render_template('table.html', units = "Thousands of persons", colnames = colnames, rows = rows,
-		title = "Labor Force: Unemployment Rate by Sex, Educational Attainment")
+	return render_template('table.html', units = "Percent (%)", colnames = colnames, rows = rows,
+		title = "Labor Force: Unemployment Rate by Sex, Educational Attainment", source = "http://bit.ly/2b0r2qk")
 
 
 ####	Labor Force: Unemployment Rate by Age
@@ -279,15 +279,15 @@ def labor_unemploymentrate_age():
 def labor_unemploymentrate_age_tab():
 	colnames = dataquery.get_colnames("labor_unemployrate_age", dataspecs.age)
 	rows = dataquery.get_sqldata("select * from labor_unemploy_age")
-	return render_template('table.html', units = "Thousands of persons", colnames = colnames, rows = rows,
-		title = "Labor Force: Unemployment Rate by Age")
+	return render_template('table.html', units = "Percent (%)", colnames = colnames, rows = rows,
+		title = "Labor Force: Unemployment Rate by Age", source = "http://bit.ly/2b0r2qk")
 
 
 ####	Emission Account of Pollution
 @app.route("/data/green-air")
 def green_air():
 	rows = dataquery.get_sqldata("select * from green_air")
-	return dataquery.chartjs_input(dataspecs.green_air, rows, "Emmission Account of Pollution", 
+	return dataquery.chartjs_input(dataspecs.green_air, rows, "Environmental Indicators: Emmission Account of Air Pollution", 
 		"Tons", "/data/green-air/table")
 
 @app.route("/data/green-air/table")
@@ -295,14 +295,14 @@ def green_air_tab():
 	colnames = dataquery.get_colnames("green_air", dataspecs.green_air)
 	rows = dataquery.get_sqldata("select * from green_air")
 	return render_template('table.html', units = "Tons", colnames = colnames, rows = rows,
-		title = "Emission Account of Pollution")
+		title = "Environmental Indicators: Emission Account of Air Pollution", source = "http://bit.ly/2aBC96j")
 
 
 ####	Population Composition by Sex
 @app.route("/data/social-population")
 def social_population():
 	rows = dataquery.get_sqldata("select * from social_pop")
-	return dataquery.chartjs_input(dataspecs.sex, rows, "Population Composition by Sex", 
+	return dataquery.chartjs_input(dataspecs.sex, rows, "Social Indicators: Population Composition by Sex", 
 		"Thousands of persons", "/data/social-population/table")
 
 @app.route("/data/social-population/table")
@@ -310,7 +310,7 @@ def social_population_tab():
 	colnames = dataquery.get_colnames("social_pop", dataspecs.sex)
 	rows = dataquery.get_sqldata("select * from social_pop")
 	return render_template("table.html", units = "Thousands of persons", colnames = colnames, rows = rows,
-		title = "Population Composition by Sex")
+		title = "Social Indicators: Population Composition by Sex", source = "http://bit.ly/2aoWjlE")
 
 
 ####	Price Indices (N.T.D. Basis)
@@ -325,7 +325,7 @@ def price_index_tab():
 	colnames = dataquery.get_colnames("price_index", dataspecs.price_index)
 	rows = dataquery.get_sqldata("select * from price_index")
 	return render_template("table.html", units = "Base Period: 2011 = 100", colnames = colnames, rows = rows,
-		title = "Price Indices (N.T.D. Basis)")
+		title = "Price Indices (N.T.D. Basis)", source = "http://bit.ly/2b0rmVZ")
 
 
 ####	Annual Change of Price Indices (N.T.D. Basis)
@@ -340,11 +340,113 @@ def price_index_change_tab():
 	colnames = dataquery.get_colnames("price_index_change", dataspecs.price_index)
 	rows = dataquery.get_sqldata("select * from price_index_change")
 	return render_template("table.html", units = "Percent (%)", colnames = colnames, rows = rows,
-		title = "Annual Change of Price Indices (N.T.D. Basis)")
+		title = "Annual Change of Price Indices (N.T.D. Basis)", source = "http://bit.ly/2b0rmVZ")
 
 
+####	Median Age of First Marriage
+@app.route("/data/social-marriage-age")
+def social_marriage_age():
+	rows = dataquery.get_sqldata("select * from social_marriage_age")
+	return dataquery.chartjs_input(dataspecs.sex_marriage, rows, "Social Indicators: Median Age of First Marriage", "Years", 
+		"/data/social-marriage-age/table")
+
+@app.route("/data/social-marriage-age/table")
+def social_marriage_age_tab():
+	colnames = dataquery.get_colnames("social_marriage_age", dataspecs.sex_marriage)
+	rows = dataquery.get_sqldata("select * from social_marriage_age")
+	return render_template("table.html", units = "Years", colnames = colnames, rows = rows,
+		title = "Social Indicators: Median Age of First Marriage", source = "http://bit.ly/2aoWjlE")
 
 
+####	Life Expectancy by Age (male)
+@app.route("/data/social-life-expectancy-male")
+def social_life_expectancy_male():
+	rows = dataquery.get_sqldata("select * from social_life_expect_male")
+	return dataquery.chartjs_input(dataspecs.life_expectancy, rows, "Social Indicators: Life Expectancy by Age (male)", "Years",
+		"/data/social-life-expectancy-male/table")
+
+@app.route("/data/social-life-expectancy-male/table")
+def social_life_expectancy_male_tab():
+	colnames = dataquery.get_colnames("social_life_expect_male", dataspecs.life_expectancy)
+	rows = dataquery.get_sqldata("select * from social_life_expect_male")
+	return render_template("table.html", units = "Years", colnames = colnames, rows = rows,
+		title = "Social Indicators: Life Expectancy by Age (male)", source = "http://bit.ly/2aoWjlE",
+		notes = "1) Data prior to 1991 do not include Fujian Province. 2) Figures since 1996 calculated using new methodology.")
+
+
+####	Life Expectancy by Age (female)
+@app.route("/data/social-life-expectancy-female")
+def social_life_expectancy_female():
+	rows = dataquery.get_sqldata("select * from social_life_expect_female")
+	return dataquery.chartjs_input(dataspecs.life_expectancy, rows, "Social Indicators: Life Expectancy by Age (female)", "Year",
+		"/data/social-life-expectancy-female/table")
+
+@app.route("/data/social-life-expectancy-female/table")
+def social_life_expectancy_female_tab():
+	colnames = dataquery.get_colnames("social_life_expect_female", dataspecs.life_expectancy)
+	rows = dataquery.get_sqldata("select * from social_life_expect_female")
+	return render_template("table.html", units = "Years", colnames = colnames, rows = rows,
+		title = "Social Indicators: Life Expectancy by Age (female)", source = "http://bit.ly/2aoWjlE",
+		notes = "1) Data prior to 1991 do not include Fujian Province. 2) Figures since 1996 calculated using new methodology.")
+
+
+####	Number of Births
+@app.route("/data/social-births")
+def social_births():
+	rows = dataquery.get_sqldata("select * from social_births")
+	return dataquery.chartjs_input(dataspecs.births, rows, "Social Indicators: Number of Births", "No.", "/data/social-births/table")
+
+@app.route("/data/social-births/table")
+def social_births_tab():
+	colnames = dataquery.get_colnames("social_births", dataspecs.births)
+	rows = dataquery.get_sqldata("select * from social_births")
+	return render_template("table.html", units = "No.", colnames = colnames, rows = rows, title = "Social Indicators Number of Births",
+		source = "http://bit.ly/2aoWjlE")
+
+
+####	Recycling
+@app.route("/data/green-recycling")
+def green_recycling():
+	rows = dataquery.get_sqldata("select * from green_recycling")
+	return dataquery.chartjs_input(dataspecs.recycling, rows, "Environmental Indicators: Recycling Account", "Tons", 
+		"/data/green-recycling/table")
+
+@app.route("/data/green-recycling/table")
+def green_recycling_tab():
+	colnames = dataquery.get_colnames("green_recycling", dataspecs.recycling)
+	rows = dataquery.get_sqldata("select * from green_recycling")
+	return render_template("table.html", units = "Tons", colnames = colnames, rows = rows, 
+		title = "Environmental Indicators: Recycling Account", source = "http://bit.ly/2aBC96j")
+
+
+####	Emission Account of Water Pollution
+@app.route("/data/green-water")
+def green_water():
+	rows = dataquery.get_sqldata("select * from green_water")
+	return dataquery.chartjs_input(dataspecs.water, rows, "Environmental Indicators: Emission Account of Water Pollution",
+		"Tons", "/data/green-water/table")
+
+@app.route("/data/green-water/table")
+def green_water_tab():
+	colnames = dataquery.get_colnames("green_water", dataspecs.water)
+	rows = dataquery.get_sqldata("select * from green_water")
+	return render_template("table.html", units = "Tons", colnames = colnames, rows = rows,
+		title = "Environmental Indicators: Emission Account of Water Pollution", source = "http://bit.ly/2aBC96j")
+
+
+####	Education Enrollment Rates
+@app.route("/data/social-edu-enrollment")
+def social_edu_enrollment():
+	rows = dataquery.get_sqldata("select * from social_edu_enroll")
+	return dataquery.chartjs_input(dataspecs.edu_enrollment, rows, "Social Indicators: Net Education Enrollment Rates",
+		"Percent (%)", "/data/social-edu-enrollment/table")
+
+@app.route("/data/social-edu-enrollment/table")
+def social_edu_enrollment_tab():
+	colnames = dataquery.get_colnames("social_edu_enroll", dataspecs.edu_enrollment)
+	rows = dataquery.get_sqldata("select * from social_edu_enroll")
+	return render_template("table.html", units = "Percent (%)", colnames = colnames, rows = rows,
+		title = "Social Indicators: Net Education Enrollment Rates", source = "http://bit.ly/2aoWjlE")
 
 if __name__ == "__main__":
 	app.run()

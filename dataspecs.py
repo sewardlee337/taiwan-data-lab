@@ -102,7 +102,36 @@ sex = {
 	'A': 'Total', 'B': 'Male', 'C': 'Female'
 }
 
+sex_marriage = {
+	'A': 'Male', 'B': 'Female'
+}
+
 price_index = {
 	'A': 'Export Price Index', 'B': 'Construction Price Index', 'C': 'Consumer Price Index', 'D': 'Wholesale Price Index', 
 	'E': 'Import Price Index' 
+}
+
+life_expectancy = {
+	'A': '0 years', 'B': '10 years', 'C': '20 years', 'D': '30 years', 'E': '40 years', 'F': '50 years', 'G': '60 years',
+	'H': '70 years', 'I': '80 years'
+}
+
+births = {
+	'A': 'Total', 'B': 'Legitimate', 'C': 'Births outside marriage', 'D': 'Births outside marriage acknowledged by father',
+	'E': 'Births outside marriage unacknowledged'
+}
+
+recycling = {
+	'A': 'Total', 'B': 'Paper', 'C': 'Used clothing', 'D': 'Metal cans, aluminum cans, other metal products', 'E': 'Glass containers',
+	'F': 'Aseptic containers', 'G': 'Paper containers', 'H': 'Agricultural chemicals containers, special environmental agents waste containers',
+	'I': 'Plastic containers', 'J': 'Plastic packaging', 'K': 'Tires', 'L': 'Dry batteries', 'M': 'Lead-acid accumulators',
+	'N': 'Home electrical appliances', 'O': 'Computers', 'P': 'Disc', 'Q': 'Mobile phone', 'R': 'Lighting', 'S': 'Cooking oil', 'T': 'Other'
+}
+
+water = {
+	'A': 'BOD', 'B': 'COD', 'C': 'SS'
+}
+
+edu_enrollment = {
+	'A': 'Primary education', 'B': 'Secondary education', 'C': 'Tertiary education'
 }
