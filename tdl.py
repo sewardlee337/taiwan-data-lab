@@ -4,8 +4,6 @@ import dataspecs, dataquery, urlparse
 app = Flask(__name__)
 
 
-
-
 ####	CONSTRUCT PAGES		####
 
 
@@ -447,6 +445,39 @@ def social_edu_enrollment_tab():
 	rows = dataquery.get_sqldata("select * from social_edu_enroll")
 	return render_template("table.html", units = "Percent (%)", colnames = colnames, rows = rows,
 		title = "Social Indicators: Net Education Enrollment Rates", source = "http://bit.ly/2aoWjlE")
+
+
+####	Education Attainment Rates
+@app.route("/data/social-edu-attainment")
+def social_edu_attainment():
+	rows = dataquery.get_sqldata("select * from social_edu_attain")
+	return dataquery.chartjs_input(dataspecs.edu_attainment, rows, "Social Indicators: Education Attainment of Population Aged 15+",
+		"Percent (%)", "/data/social-edu-attainment/table")
+
+@app.route("/data/social-edu-attainment/table")
+def social_edu_attainment_tab():
+	colnames = dataquery.get_colnames("social_edu_attain", dataspecs.edu_attainment)
+	rows = dataquery.get_sqldata("select * from social_edu_attain")
+	return render_template("table.html", units = "Percent (%)", colnames = colnames, rows = rows,
+		title = "Social Indicators: Education Attainment of Population Aged 15+", source = "http://bit.ly/2aoWjlE")
+
+
+####	Standardized Death Rates
+@app.route("/data/social-death-rates")
+def social_death_rates():
+	rows = dataquery.get_sqldata("select * from social_deaths")
+	return dataquery.chartjs_input(dataspecs.deaths, rows, 
+		"Social Indicators: Standardized Death Rates of Leading Causes per 100,000 Population", "Rate", 
+		"/data/social-death-rates/table")
+
+@app.route("/data/social-death-rates/table")
+def social_death_rates_tab():
+	colnames = dataquery.get_colnames("social_deaths", dataspecs.deaths)
+	rows = dataquery.get_sqldata("select * from social_deaths")
+	return render_template("table.html", units = "Rate", colnames = colnames, rows = rows,
+		title = "Social Indicators: Standardized Death Rates of Leading Causes per 100,000 Population",
+		social = "http://bit.ly/2aoWjlE")
+
 
 if __name__ == "__main__":
 	app.run()

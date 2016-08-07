@@ -135,3 +135,13 @@ water = {
 edu_enrollment = {
 	'A': 'Primary education', 'B': 'Secondary education', 'C': 'Tertiary education'
 }
+
+edu_attainment = {
+	'A': 'Junior high school and below', 'B': 'Senior high school and vocational school', 'C': 'Junior college and above'
+}
+
+deaths = {
+	'A': 'Malignant neoplasms', 'B': 'Heart disease', 'C': 'Cerebro vascular disease', 'D': 'Diabetes mellitus', 'E': 'Pneumonia',
+	'F': 'Accidents', 'G': 'Chronic lower respiratory diseases', 'H': 'Chronic liver disease & cirrhosis', 'I': 'Hypertensive disease',
+	'J': 'Suicide', 'K': 'Nephritis, nephrotic syndrome, nephrosis'
+}
