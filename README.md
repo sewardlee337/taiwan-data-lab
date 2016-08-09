@@ -8,3 +8,5 @@ This project is built using:
 * [DataTables](https://www.datatables.net/) - Table plug-in for jQuery
 * [SQLite](https://www.sqlite.org/) - Embedded SQL database engine 
 * [Bootstrap](http://getbootstrap.com/) - HTML, CSS, JavaScript framework for responsive webpages
+
+Check it out at [http://taiwandatalab.com](http://taiwandatalab.com)
