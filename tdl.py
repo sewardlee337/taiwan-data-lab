@@ -476,7 +476,23 @@ def social_death_rates_tab():
 	rows = dataquery.get_sqldata("select * from social_deaths")
 	return render_template("table.html", units = "Rate", colnames = colnames, rows = rows,
 		title = "Social Indicators: Standardized Death Rates of Leading Causes per 100,000 Population",
-		social = "http://bit.ly/2aoWjlE")
+		source = "http://bit.ly/2aoWjlE")
+
+####	Cross Strait Affairs: Trade with China
+@app.route("/data/cross-strait-cn-trade")
+def cross_strait_cn_trade():
+	rows = dataquery.get_sqldata("select * from strait_cntrade")
+	return dataquery.chartjs_input(dataspecs.cn_trade, rows, 
+		"Cross-Strait Affairs: Trade with Mainland China", "Million US$", 
+		"/data/cross-strait-cn-trade/table")
+
+@app.route("/data/cross-strait-cn-trade/table")
+def cross_strait_cn_trade_tab():
+	colnames = dataquery.get_colnames("strait_cntrade", dataspecs.cn_trade)
+	rows = dataquery.get_sqldata("select * from strait_cntrade")
+	return render_template("table.html", units = "Million US$", colnames = colnames, rows = rows,
+		title = "Cross-Strait Affairs: Trade with Mainland China",
+		source = "http://bit.ly/2bz8ZEw", notes = "1) 'Exports' indicates exportation from Taiwan to Mainland China. 'Imports' indicates importation from Mainland China to Taiwan. 2) ROC Customs Statistics from 2001 through 2016 have been revised based on General Trade System to conform to United Nations International Merchandise Trade Statistics.")
 
 
 if __name__ == "__main__":

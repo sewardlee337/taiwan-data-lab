@@ -145,3 +145,8 @@ deaths = {
 	'F': 'Accidents', 'G': 'Chronic lower respiratory diseases', 'H': 'Chronic liver disease & cirrhosis', 'I': 'Hypertensive disease',
 	'J': 'Suicide', 'K': 'Nephritis, nephrotic syndrome, nephrosis'
 }
+
+cn_trade = {
+	'A': 'Exports (ROC Customs Statistics)', 'B': 'Imports (ROC Customs Statistics)', 'C': 'Total (ROC Customs Statistics)',
+	'D': 'Exports (PRC Customs Statistics)', 'E': 'Imports (PRC Customs Statistics)', 'F': 'Total (PRC Customs Statistics)'
+}
