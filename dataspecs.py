@@ -150,3 +150,8 @@ cn_trade = {
 	'A': 'Exports (ROC Customs Statistics)', 'B': 'Imports (ROC Customs Statistics)', 'C': 'Total (ROC Customs Statistics)',
 	'D': 'Exports (PRC Customs Statistics)', 'E': 'Imports (PRC Customs Statistics)', 'F': 'Total (PRC Customs Statistics)'
 }
+
+trade_countries = {
+	'A': 'United States', 'B': 'Japan', 'C': 'Hong Kong', 'D': 'South Korea', 'E': 'Germany', 'F': 'Singapore', 'G': 'Malaysia',
+	'H': 'Netherlands', 'I': 'United Kingdom', 'J': 'China'
+}

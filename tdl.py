@@ -494,6 +494,53 @@ def cross_strait_cn_trade_tab():
 		title = "Cross-Strait Affairs: Trade with Mainland China",
 		source = "http://bit.ly/2bz8ZEw", notes = "1) 'Exports' indicates exportation from Taiwan to Mainland China. 'Imports' indicates importation from Mainland China to Taiwan. 2) ROC Customs Statistics from 2001 through 2016 have been revised based on General Trade System to conform to United Nations International Merchandise Trade Statistics.")
 
+####	International Trade: Exports with Major Trading Partners
+@app.route("/data/trade-exports")
+def trade_exports():
+	rows = dataquery.get_sqldata("select * from trade_exports")
+	return dataquery.chartjs_input(dataspecs.trade_countries, rows,
+		"International Trade: Exports with Major Trading Partners", "US$",
+		"/data/trade-exports/table")
+
+@app.route("/data/trade-exports/table")
+def trade_exports_tab():
+	colnames = dataquery.get_colnames("trade_exports", dataspecs.trade_countries)
+	rows = dataquery.get_sqldata("select * from trade_exports")
+	return render_template("table.html", units = "US$", colnames = colnames, rows = rows,
+		title = "International Trade: Exports with Major Trading Partners",
+		source = "http://bit.ly/2bw6PE8", notes = "1) Figures include re-exports. 2) Countries identified as 'Major Trading Partners' based on 'Cross-Strait Economic Statistics Monthly' published by Mainland Affairs Council")
+
+####	International Trade: Imports with Major Trading Partners
+@app.route("/data/trade-imports")
+def trade_imports():
+	rows = dataquery.get_sqldata("select * from trade_imports")
+	return dataquery.chartjs_input(dataspecs.trade_countries, rows,
+		"International Trade: Imports with Major Trading Partners", "US$",
+		"/data/trade-imports/table")
+
+@app.route("/data/trade-imports/table")
+def trade_imports_tab():
+	colnames = dataquery.get_colnames("trade_imports", dataspecs.trade_countries)
+	rows = dataquery.get_sqldata("select * from trade_imports")
+	return render_template("table.html", units = "US$", colnames = colnames, rows = rows,
+		title = "International Trade: Imports with Major Trading Partners",
+		source = "http://bit.ly/2bw6PE8", notes = "1) Figures include re-imports. 2) Countries identified as 'Major Trading Partners' based on 'Cross-Strait Economic Statistics Monthly' published by Mainland Affairs Council")
+
+####	International Trade: Total Trade with Major Trading Partners
+@app.route("/data/trade-total")
+def trade_total():
+	rows = dataquery.get_sqldata("select * from trade_total")
+	return dataquery.chartjs_input(dataspecs.trade_countries, rows,
+		"International Trade: Total Trade with Major Trading Partners", "US$",
+		"/data/trade-total/table")
+
+@app.route("/data/trade-total/table")
+def trade_total_tab():
+	colnames = dataquery.get_colnames("trade_total", dataspecs.trade_countries)
+	rows = dataquery.get_sqldata("select * from trade_total")
+	return render_template("table.html", units = "US$", colnames = colnames, rows = rows,
+		title = "International Trade: Total Trade with Major Trading Partners",
+		source = "http://bit.ly/2bw6PE8", notes = "Figures include re-exports and re-imports. 2) Countries identified as 'Major Trading Partners' based on 'Cross-Strait Economic Statistics Monthly' published by Mainland Affairs Council")
 
 if __name__ == "__main__":
 	app.run()
