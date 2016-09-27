@@ -1,5 +1,20 @@
-.body { 
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body { 
     font-family: 'Roboto', sans-serif; 
+    min-height: 100%;
+    margin: 0;
+    padding-bottom: 6rem;
+    position: relative;
 }
 
 .navbar {
@@ -16,6 +31,7 @@
     color: white;
     min-height: 400px;
 }
+
 
 #text-content {
 	font-size: 120%;
@@ -74,4 +90,15 @@
 
 #title {
     font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #808080;
+  text-align: center;
+  color: white;
 }

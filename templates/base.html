@@ -32,6 +32,7 @@
 
 
 	<body>
+	<div id="wrapper">
 		
 		<!-- NAVBAR -->
 
@@ -51,12 +52,32 @@
 		    	<!-- Collect the nav links, forms, and other content for toggling -->
 			    <div class="collapse navbar-collapse">
 			      <ul class="nav navbar-nav">
-			        <li><a href="/data">Data</a></li>
-			        <li><a href="/construction">Cluster Mapping Project</a></li>
+
+			      	<li class="dropdown">
+			          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Data <span class="caret"></span></a>
+			          <ul class="dropdown-menu">
+			            <li><a href="/data">Taiwan Government Data</a></li>
+			            <li><a href="/construction">IMF World Economic Outlook</a></li>
+			            <li><a href="/construction">IMF Direction of Trade Statistics</a></li>
+			            <li role="separator" class="divider"></li>
+			            <li><a href="/construction">Data Directory</a></li>
+			          </ul>
+			        </li>
+
+			        <li class="dropdown">
+			          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Research <span class="caret"></span></a>
+			          <ul class="dropdown-menu">
+			            <li><a href="/construction">Taiwan Cluster Mapping</a></li>
+			          </ul>
+			        </li>
+
+
+			        <li><a href="/construction">Tools</a></li>
 			      </ul>
 			      <ul class="nav navbar-nav navbar-right">
 			      	<li><a href="/construction">Blog</a></li>
 			        <li><a href="https://github.com/sewardlee337/taiwan-data-lab">GitHub</a></li>
+			        <li><a href="/construction">Team</a></li>
 			  		<li><a href="/thanks">Thanks</a></li>
 			      </ul>
 			    </div><!-- /.navbar-collapse -->
@@ -64,13 +85,25 @@
 		  </div><!-- /.container-fluid -->
 		</nav>
 
+
+
 		{% block content %} {% endblock %}
 
-		<br>
-      	<br>
 
-      
 
+    	<!-- FOOTER -->
+
+	  		<div class="footer">
+	  		<ul>
+		  		<div class="container">
+		  			<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+		  		</div>
+		  	</ul>
+			</div>
+
+
+
+  	</div>
 	</body>
 
 </html>
