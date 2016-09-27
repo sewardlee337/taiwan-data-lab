@@ -1,0 +1,141 @@
+{% extends "base.html" %}
+{% block content %}
+
+	<!-- TITLE BAR -->
+
+	<nav class="navbar navbar-default" id="searchbar">
+		 <div class="container">
+			<h2 id = "pagetitle"> ROC Statistical System Directory </h2>
+
+		</div>
+	</nav>		<!-- CLOSE TITLE BAR -->
+
+
+
+<br>
+<br>
+
+	<!-- DESCRIPTION -->
+
+	<div class="container" id="text-content">
+
+		<p>General clearinghouses for Taiwan government data include: </p>
+			<ul>
+				<li><a href="http://eng.stat.gov.tw/mp.asp?mp=5">National Statistics website</a> (English and Chinese)</li>
+				<li><a href="http://data.gov.tw/">Taiwan Open Data portal</a> (Chinese only)</li>
+			</ul>
+
+		<br>
+		
+		<p>The compilation and dissemination of Taiwan statistics by the ROC government is decentralized and delegated to a number of departments, agencies, and bureaus. Below is a non-exhaustive list of links to the websites to these statistical organizations.</p>	
+
+		<br>
+
+	</div>
+
+
+
+	<!-- TABLE -->
+	<div class="container">
+
+	<script>
+
+			$(document).ready(function() {
+    			$('#datatable').DataTable( {
+    				"scrollX": true,
+        			dom: 'Bfrtip',
+			        buttons: [
+			           
+			        ]
+    			} );
+			} );
+			
+		</script>
+
+
+
+	<table id="datatable" class="display" width="100%" cellspacing="0">
+
+	<thead>
+	        <tr>
+	            <th>Type</th>
+	            <th>Organization</th>
+	        </tr>
+	    </thead>
+	    <tbody>
+	        <tr>
+	        	<td>Statistical Department</td>
+	            <td><a href="http://bit.ly/2dx3iXO">Ministry of Interior</a></td>
+	        </tr>
+	        <tr>
+	            <td>Statistical Department</td>
+	            <td><a href= "http://bit.ly/2cTe75B">Ministry of Finance</a></td>
+	        </tr>
+	        <tr>
+	            <td>Statistical Department</td>
+	            <td><a href='http://bit.ly/1M79VfG'>Ministry of Education</a></td>
+	        </tr>
+	        <tr>
+	            <td>Statistical Department</td>
+	            <td><a href='http://bit.ly/2d1c3uh'>Ministry of Justice</a></td>
+	        </tr>
+	        <tr>
+	            <td>Statistical Department</td>
+	            <td><a href='http://bit.ly/2bjWwnk'>Ministry of Economic Affairs</a></td>
+	        </tr>
+	        <tr>
+	            <td>Statistical Department</td>
+	            <td><a href='http://bit.ly/2czmDFC'>Bureau of Energy, Ministry of Economic Affairs</a></td>
+	        </tr>
+	         <tr>
+	            <td>Statistical Department</td>
+	            <td><a href='http://bit.ly/2d7ovrz'>Ministry of Transportation and Communications</a></td>
+	        </tr>
+	        <tr>
+	            <td>Statistical Department</td>
+	            <td><a href='http://bit.ly/2dAh9j8'>Ministry of Labor</a></td>
+	        </tr>
+	        <tr>
+	            <td>Statistical Department</td>
+	            <td><a href='http://bit.ly/2dhDoGa'>Council of Agriculture, Executive Yuan</a></td>
+	        </tr>
+	        <tr>
+	            <td>Statistical Department</td>
+	            <td><a href='http://bit.ly/2aPETN0'>Ministry of Health and Welfare</a></td>
+	        </tr>
+	        <tr>
+	            <td>Statistical Department</td>
+	            <td><a href='http://bit.ly/2dhEh1w'>Veterans Affairs Council</a></td>
+	        </tr>
+	        <tr>
+	            <td>Municipal Government</td>
+	            <td><a href='http://bit.ly/2ddvTlL'>Taipei City / New Taipei City</a></td>
+	        </tr>
+	        <tr>
+	            <td>Municipal Government</td>
+	            <td><a href='http://bit.ly/2d76J9v'>Keelung City</a></td>
+	        </tr>
+	        <tr>
+	            <td>Municipal Government</td>
+	            <td><a href='http://bit.ly/2dAmwid'>Tainan City</a></td>
+	        </tr>
+	        <tr>
+	            <td>Municipal Government</td>
+	            <td><a href='http://bit.ly/2dpt4gf'>Kaohsiung City</a></td>
+	        </tr>
+	        <tr>
+	            <td>Municipal Government</td>
+	            <td><a href='http://bit.ly/2d7tAQJ'>Taitung City</a></td>
+	        </tr>
+	        <tr>
+	            <td>Municipal Government</td>
+	            <td><a href='http://bit.ly/2dpuDuE'>Hualien City</a></td>
+	        </tr>
+
+	    </tbody>
+	</table>
+
+	</div>
+
+
+{% endblock %}

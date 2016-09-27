@@ -20,6 +20,10 @@ def thanks():
 def construction():
 	return render_template('construction.html')
 
+@app.route("/directory")
+def directory():
+	return render_template('directory.html')
+
 @app.route("/data")
 def datapage():
 	description = "Access datasets available on Taiwan Data Lab with the menu to the right. New datasets will be periodically added."
