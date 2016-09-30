@@ -28,6 +28,10 @@ def directory():
 def faqs():
 	return render_template('faqs.html')
 
+@app.route("/test")
+def test():
+	return render_template('test.html')
+
 @app.route("/data")
 def datapage():
 	description = "Access datasets available on Taiwan Data Lab with the menu to the right. New datasets will be periodically added."
