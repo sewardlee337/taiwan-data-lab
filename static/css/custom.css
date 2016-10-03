@@ -58,7 +58,7 @@ body {
 }
 
 #searchbar {
-    background-color: #808080;
+    background-color: #7171C6 ;
     position: relative;
     height: 75px;
 }
@@ -99,7 +99,7 @@ body {
   bottom: 0;
   left: 0;
   padding: 1rem;
-  background-color: #808080;
+  background-color: #7171C6;
   text-align: center;
   color: white;
 }

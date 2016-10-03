@@ -14,7 +14,8 @@ def index():
 
 @app.route("/thanks")
 def thanks():
-	return render_template('thanks.html')
+	spark_gdp = dataquery.get_sqldata("select A from accounts_rgdp")
+	return render_template('thanks.html', spark_gdp = spark_gdp)
 
 @app.route("/construction")
 def construction():
@@ -34,8 +35,7 @@ def test():
 
 @app.route("/data")
 def datapage():
-	description = "Access datasets available on Taiwan Data Lab with the menu to the right. New datasets will be periodically added."
-	return render_template('data.html', description = description)
+	return render_template('data-intro.html')
 
 
 ####	National Accounts: GDP (nominal)

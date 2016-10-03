@@ -34,14 +34,12 @@
 		            <span class="sr-only">Toggle navigation</span>
 		            <span class="icon-bar"></span>
 		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
 		          </button>
 		          <span class="visible-xs navbar-brand">Sidebar menu</span>
 		        </div>
 		        <div class="navbar-collapse collapse sidebar-navbar-collapse">
 		          <ul class="nav navbar-nav">
-
-		          	
-
 
 		          	<!-- National Accounts -->
 		            <li class="dropdown">
@@ -54,7 +52,7 @@
 		              </ul>
 		            </li>
 
-		             <!-- Labor Force -->
+		            <!-- Labor Force -->
 		            <li class="dropdown">
 		              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Labor Force <b class="caret"></b></a>
 		              <ul class="dropdown-menu">
@@ -74,15 +72,6 @@
 		              </ul>
 		            </li>
 
-		            <!-- Prices -->
-		            <li class="dropdown">
-		              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Prices <b class="caret"></b></a>
-		              <ul class="dropdown-menu">
-							<li><a href="/data/price-index">Price Indices</a></li>
-							<li><a href="/data/price-index-change">Annual Change of Price Indices</a></li>
-		              </ul>
-		            </li>
-
 
 		            <!-- Social Indicators -->
 		            <li class="dropdown">
@@ -96,6 +85,15 @@
 							<li><a href="/data/social-death-rates">Standardized Death Rates</a></li>
 							<li><a href="/data/social-edu-enrollment">Education Enrollment Rates</a></li>
 							<li><a href="/data/social-edu-attainment">Education Attainment Rates</a></li>
+		              </ul>
+		            </li>
+
+		          	<!-- Prices -->
+		            <li class="dropdown">
+		              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Prices <b class="caret"></b></a>
+		              <ul class="dropdown-menu">
+							<li><a href="/data/price-index">Price Indices</a></li>
+							<li><a href="/data/price-index-change">Annual Change of Price Indices</a></li>
 		              </ul>
 		            </li>
 
@@ -147,12 +145,10 @@
 		 
 		</div> <!-- CLOSE VERTICAL MENU -->
 
+		<div class="col-md-9">
 
-		<div class="container">
-			<div class ="col-md-9">
-			<p id= "text-content"> {{ description }} </p>
-
-				{% block display %} {% endblock %}
+		{% block display %} {% endblock %}
+		</div>
 
 
 
@@ -161,13 +157,13 @@
 			</div>
 		</div>		<!-- CLOSE TABS -->
 
-
+		<br>
+		<br>
 
 	</div>
 
 	<br>
 	<br>
 
-
-
 {% endblock %}
+
