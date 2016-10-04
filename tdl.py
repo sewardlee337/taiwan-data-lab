@@ -33,6 +33,10 @@ def faqs():
 def test():
 	return render_template('test.html')
 
+@app.route("/cluster")
+def cluster():
+	return render_template('cluster.html')
+
 @app.route("/data")
 def datapage():
 	return render_template('data-intro.html')

@@ -126,3 +126,7 @@ body {
     padding-bottom: 6px;
   }
 }
+
+/* leaflet test */
+
+#mapid { height: 180px; }
