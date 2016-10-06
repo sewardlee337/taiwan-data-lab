@@ -22,8 +22,10 @@
 
 		<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 
-		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
-		<script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
+    	<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    	<script src="https://d3js.org/topojson.v1.min.js"></script>
+    	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+    	<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
 
 
 
@@ -76,7 +78,7 @@
 			          <ul class="dropdown-menu">
 			          		<li class="dropdown-header">Datasets</li>
 					            <li><a href="/data">Taiwan Government Data</a></li>
-					            <li><a href="/construction">IMF World Economic Outlook</a></li>
+					            <li><a href="/imf-weo">IMF World Economic Outlook</a></li>
 					            <li><a href="/construction">IMF Direction of Trade Statistics</a></li>
 			            <li role="separator" class="divider"></li>
 			            	<li class="dropdown-header">Info</li>

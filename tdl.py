@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, url_for
 import dataspecs, dataquery, urlparse
 
 app = Flask(__name__)
@@ -41,6 +41,9 @@ def cluster():
 def datapage():
 	return render_template('data-intro.html')
 
+@app.route("/imf-weo")
+def imf_weo():
+	return render_template('imf-weo.html')
 
 ####	National Accounts: GDP (nominal)
 @app.route("/data/natlaccounts-ngdp")

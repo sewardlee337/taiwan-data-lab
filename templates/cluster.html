@@ -15,6 +15,8 @@
 
 <div class='container'>
 
+
+
   <div id = "text-content">
 
     <h3 class = "page-header"><strong>Overview</strong></h3>
@@ -39,37 +41,96 @@
 
     <br>
 
+    <p>  </p>
+
   </div>
 
 
 
 
   <!-- Leaflet Map -->
-  <div id="mapid" style="width: 430px; height: 700px;"></div>
-
-  <script>
-
-    var mymap = L.map('mapid').setView([23.6, 120.9605], 7.5);
-
-    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpandmbXliNDBjZWd2M2x6bDk3c2ZtOTkifQ._QA7i5Mpkd_m30IGElHziw', {
-    maxZoom: 18,
-    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
-      '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-      'Imagery © <a href="http://mapbox.com">Mapbox</a>',
-    id: 'mapbox.streets'
-  }).addTo(mymap);
 
 
+  
 
-  </script>
-<!-- close leaflet map -->
+    <div id="mapid" style="width: 430px; height: 700px;"></div>
+
+      <script>
+      var mymap = L.map('mapid', {
+          center: [23.6, 121],
+          zoom: 8,
+          dragging: false,
+          scrollWheelZoom: 'center',
+          doubleClickZoom: 'center',
+          boxZoom: false
+      }); // center 跟 zoom 這兩個 option 也可以改寫成 .setView([23.6, 121], 8);
+      // 讀取 OpenStreetMap 的 Map Tile
+      L.tileLayer('http://{s}.tile.openstreetmap.se/hydda/base/{z}/{x}/{y}.png', {
+          attribution: 'Tiles courtesy of <a href="http://openstreetmap.se/" target="_blank">OpenStreetMap Sweden</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+      }).addTo(mymap);
+      // 在 .leaflet-objects-pane --> .leaflet-overlay-pane 裡面新增 Element
+      var svg = d3.select(mymap.getPanes().overlayPane).append("svg"),
+          g = svg.append("g").attr("class", "leaflet-zoom-hide");
+      // 讀取、綁定資料
+      d3.json("{{ url_for('static', filename='tw.json') }}", function(error, tw) {
+          if (error) throw error;
+          // 把 GeoJSON 轉換成 SVG
+          var transform = d3.geo.transform({
+                  point: projectPoint
+              }),
+              path = d3.geo.path().projection(transform);
+          // 用 Data Join 的方式加入 Path
+          // 這時候還沒有實際去畫出 Path，等下才要加入 `.attr("d", path);`，這邊先等等
+          var feature = g.selectAll("path")
+              .data(topojson.feature(tw, tw.objects.taiwan).features)
+              .enter().append("path");
+          var label = g.selectAll(".place-label")
+              .data(topojson.feature(tw, tw.objects.taiwan).features)
+              .enter().append("text")
+          // 每次圖片一有什麼動作（移動、縮放、等等等），就要重新繪圖
+          mymap.on("viewreset", reset);
+          reset();
+          // Reposition the SVG to cover the features.
+          function reset() {
+              // SVG 的尺寸很難界定，因為使用者會對 SVG 放大縮小，所以指定一個固定的尺寸並不切實際
+              // 要用 D3 的 Path bounds 來幫忙(https://github.com/mbostock/d3/wiki/Geo-Paths#wiki-path_bounds)
+              var bounds = path.bounds(topojson.feature(tw, tw.objects.taiwan)),
+                  topLeft = bounds[0],
+                  bottomRight = bounds[1];
+              svg.attr("width", bottomRight[0] - topLeft[0])
+                  .attr("height", bottomRight[1] - topLeft[1])
+                  .style("left", topLeft[0] + "px")
+                  .style("top", topLeft[1] + "px");
+              g.attr("transform", "translate(" + -topLeft[0] + "," + -topLeft[1] + ")");
+              feature.attr("d", path);
+              label.attr("class", "place-label")
+                  .attr("transform", function(d) {
+                      var centroid = path.centroid(d),
+                          x = centroid[0],
+                          y = centroid[1];
+                      return "translate(" + x + "," + y + ")";
+                  })
+                  .attr("dy", ".35em")
+                  .text(function(d) {
+                      return d.properties.name;
+                  });
+          }
+          // Use Leaflet to implement a D3 geometric transformation.
+          // 因為 D3 用來處理 Projection 的系統跟 Leaflet 不一樣，所以用個函式來轉換
+          // 官方說法：D3 and Leaflet use different APIs for rendering shapes and projecting points.
+          function projectPoint(x, y) {
+              var point = mymap.latLngToLayerPoint(new L.LatLng(y, x));
+              this.stream.point(point.x, point.y);
+          }
+      });
+      </script>
+  <!-- close leaflet map -->
 
 </div>
 
 <br>
 <br>
 <br>
-
 
 	
 

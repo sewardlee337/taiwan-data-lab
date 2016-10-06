@@ -1,0 +1,169 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+	<!-- TITLE BAR -->
+
+	<nav class="navbar navbar-default" id="searchbar">
+		 <div class="container">
+			<h2 id = "pagetitle"> IMF World Economic Outlook</h2>
+
+		</div>
+	</nav>		<!-- CLOSE TITLE BAR -->
+
+	 
+
+	<div class="container">
+		
+	  	<br>
+	  	<br>	
+		
+	</div>		
+
+
+
+	<div class = "container">
+
+		<!-- VERTICAL MENU -->
+
+		  <div class="col-md-3">
+		    <div class="sidebar-nav">
+		      <div class="navbar navbar-default" role="navigation">
+		        <div class="navbar-header">
+		          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse">
+		            <span class="sr-only">Toggle navigation</span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		          </button>
+		          <span class="visible-xs navbar-brand">Sidebar menu</span>
+		        </div>
+		        <div class="navbar-collapse collapse sidebar-navbar-collapse">
+		          <ul class="nav navbar-nav">
+
+		          	<!-- National Accounts -->
+		            <li class="dropdown">
+		              <a href="#" class="dropdown-toggle" data-toggle="dropdown">National Accounts <b class="caret"></b></a>
+		              <ul class="dropdown-menu">
+				  			<li><a href="">GDP, constant prices (NT$)</a></li>
+				  			<li><a href="">GDP, constant prices (%&Delta;)</a></li>
+							<li><a href="">GDP, current prices (NT$)</a></li>
+							<li><a href="">GDP, current prices (US$)</a></li> 
+		              </ul>
+		            </li>
+
+		            <!-- Labor Force -->
+		            <li class="dropdown">
+		              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Labor Force <b class="caret"></b></a>
+		              <ul class="dropdown-menu">
+							<li><a href="/data/labor-employment-edu">Employment by Sex, Education Attainment</a></li>
+							<li><a href="/data/labor-employment-age">Employment by Age</a></li>
+							<li><a href="/data/labor-employment-industry">Employment by Industry</a></li>
+							<li><a href="/data/labor-employment-occupation">Employment by Occupation</a></li>
+							<li><a href="/data/labor-employment-class">Employment by Class of Workers</a></li>
+							<li><a href="/data/labor-unemployment-edu">Unemployment by Sex, Education Attainment</a></li>
+							<li><a href="/data/labor-unemployment-age">Unemployment by Age</a></li>
+							<li><a href="/data/labor-unemployment-reason">Unemployment by Reason</a></li>
+							<li><a href="/data/labor-notlaborforce">Not in Labor Force</a></li>
+							<li><a href="/data/labor-participation-edu">Labor Force Participation Rate by Sex, Education Attainment</a></li>
+							<li><a href="/data/labor-participation-age">Labor Force Participation Rate by Age</a></li>
+							<li><a href="/data/labor-unemploymentrate-edu">Unemployment Rate by Sex, Education Attainment</a></li>
+							<li><a href="/data/labor-unemploymentrate-age">Unemployment Rate by Age</a></li>
+		              </ul>
+		            </li>
+
+
+		            <!-- Social Indicators -->
+		            <li class="dropdown">
+		              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Social Indicators <b class="caret"></b></a>
+		              <ul class="dropdown-menu">
+							<li><a href="/data/social-population">Population by Sex</a></li>
+							<li><a href="/data/social-marriage-age">Median Age of First Marriage</a></li>
+							<li><a href="/data/social-births">Number of Births</a></li>
+							<li><a href="/data/social-life-expectancy-male">Life Expectancy by Age (male)</a></li>
+							<li><a href="/data/social-life-expectancy-female">Life Expectancy by Age (female)</a></li>
+							<li><a href="/data/social-death-rates">Standardized Death Rates</a></li>
+							<li><a href="/data/social-edu-enrollment">Education Enrollment Rates</a></li>
+							<li><a href="/data/social-edu-attainment">Education Attainment Rates</a></li>
+		              </ul>
+		            </li>
+
+		          	<!-- Prices -->
+		            <li class="dropdown">
+		              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Prices <b class="caret"></b></a>
+		              <ul class="dropdown-menu">
+							<li><a href="/data/price-index">Price Indices</a></li>
+							<li><a href="/data/price-index-change">Annual Change of Price Indices</a></li>
+		              </ul>
+		            </li>
+
+
+		            <!-- Environmental Indicators -->
+		            <li class="dropdown">
+		              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Environmental Indicators <b class="caret"></b></a>
+		              <ul class="dropdown-menu">
+							<li><a href="/data/green-air">Air Pollution</a></li>
+							<li><a href="/data/green-water">Water Pollution</a></li>
+							<li><a href="/data/green-recycling">Recycling</a></li>
+		              </ul>
+		            </li>
+
+
+		            <!-- International Trade -->
+		            <li class="dropdown">
+		              <a href="#" class="dropdown-toggle" data-toggle="dropdown">International Trade <b class="caret"></b></a>
+		              <ul class="dropdown-menu">
+							<li><a href="/data/trade-exports">Exports with Major Trading Partners </a></li>
+							<li><a href="/data/trade-imports">Imports with Major Trading Partners </a></li>
+							<li><a href="/data/trade-total">Total Trade with Major Trading Partners </a></li>
+		              </ul>
+		            </li>
+
+
+		            <!-- TO BE ADDED -->
+		            <li class="dropdown">
+		              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Family Income and Expenditure <b class="caret"></b></a>
+		              <ul class="dropdown-menu">
+							<li><a href="">Coming Soon </a></li>
+						</ul>
+		            </li>
+
+
+		            <!-- TO BE ADDED -->
+		            <li class="dropdown">
+		              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Travel and Tourism <b class="caret"></b></a>
+		              <ul class="dropdown-menu">
+							<li><a href="">Coming Soon </a></li>
+						</ul>
+		            </li>
+
+		          </ul>
+		        </div><!--/.nav-collapse -->
+		      </div>
+		    </div>
+		  
+		 
+		</div> <!-- CLOSE VERTICAL MENU -->
+
+		<div class="col-md-9">
+
+		{% block display %} {% endblock %}
+		</div>
+
+
+
+      	<br>
+      	<br>
+			</div>
+		</div>		<!-- CLOSE TABS -->
+
+		<br>
+		<br>
+
+	</div>
+
+	<br>
+	<br>
+
+{% endblock %}
+

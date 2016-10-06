@@ -129,4 +129,28 @@ body {
 
 /* leaflet test */
 
-#mapid { height: 180px; }
+    #mapid {
+        width: 960px;
+        height: 720px;
+    }
+    
+    svg {
+        position: relative;
+    }
+    
+    path {
+        fill: #000;
+        fill-opacity: .2;
+        stroke: #fff;
+        stroke-width: 1.5px;
+    }
+    
+    path:hover {
+        fill: brown;
+        fill-opacity: .7;
+    }
+    
+    .place-label {
+        font-size: 8pt;
+        text-anchor: middle;
+    }
