@@ -154,3 +154,15 @@ body {
         font-size: 8pt;
         text-anchor: middle;
     }
+
+.top-menu {
+  list-style: none;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.top-menu li {
+  display: inline-block;
+  color: #999;
+  padding: .2em 1.2em;
+}
