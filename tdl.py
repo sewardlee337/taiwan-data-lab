@@ -35,7 +35,11 @@ def test():
 
 @app.route("/cluster")
 def cluster():
-	return render_template('cluster.html')
+	return render_template('cluster-overview.html')
+
+@app.route("/cluster-info")
+def cluster_info():
+	return render_template('cluster-info.html')
 
 @app.route("/data")
 def datapage():
