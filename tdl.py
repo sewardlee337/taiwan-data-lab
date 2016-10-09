@@ -47,7 +47,7 @@ def datapage():
 
 @app.route("/imf-weo")
 def imf_weo():
-	return render_template('imf-weo.html')
+	return render_template('imf-weo-intro.html')
 
 ####	National Accounts: GDP (nominal)
 @app.route("/data/natlaccounts-ngdp")

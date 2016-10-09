@@ -155,6 +155,8 @@ body {
         text-anchor: middle;
     }
 
+/* research top menu */
+
 .top-menu {
   list-style: none;
   text-align: center;
@@ -165,4 +167,29 @@ body {
   display: inline-block;
   color: #999;
   padding: .2em 1.2em;
+}
+
+
+/* research top menu */
+
+#districts {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#districts td, #districts th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#districts tr:nth-child(even){background-color: #f2f2f2;}
+
+#districts tr:hover {background-color: #ddd;}
+
+#districts th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #808080;
+  color: white;
 }
