@@ -40,11 +40,12 @@ body {
 
 #intro-title {
 	text-align: center;
+  font-family: 'Open Sans Condensed', sans-serif;
 }
 
 #datatypes {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 2px;
+    padding-bottom: 2px;
 }
 
 .fa {
@@ -192,4 +193,14 @@ body {
   text-align: left;
   background-color: #808080;
   color: white;
+}
+
+/* Sparklines */
+
+.jqstooltip{
+    box-sizing: content-box;
+}
+
+.sparkbox {
+  background-color: #f7f7f7;
 }

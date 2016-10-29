@@ -1,53 +1,14 @@
+from taiwandatalab import app
+
 from flask import Flask, render_template, request, url_for
 import dataspecs, dataquery, urlparse
 
-app = Flask(__name__)
 
-
-####	CONSTRUCT PAGES		####
-
-
-@app.route("/")
-@app.route("/index")
-def index():
-	return render_template('index.html')
-
-@app.route("/thanks")
-def thanks():
-	spark_gdp = dataquery.get_sqldata("select A from accounts_rgdp")
-	return render_template('thanks.html', spark_gdp = spark_gdp)
-
-@app.route("/construction")
-def construction():
-	return render_template('construction.html')
-
-@app.route("/directory")
-def directory():
-	return render_template('directory.html')
-
-@app.route("/faqs")
-def faqs():
-	return render_template('faqs.html')
-
-@app.route("/test")
-def test():
-	return render_template('test.html')
-
-@app.route("/cluster")
-def cluster():
-	return render_template('cluster-overview.html')
-
-@app.route("/cluster-info")
-def cluster_info():
-	return render_template('cluster-info.html')
 
 @app.route("/data")
 def datapage():
 	return render_template('data-intro.html')
 
-@app.route("/imf-weo")
-def imf_weo():
-	return render_template('imf-weo-intro.html')
 
 ####	National Accounts: GDP (nominal)
 @app.route("/data/natlaccounts-ngdp")
@@ -564,6 +525,3 @@ def trade_total_tab():
 	return render_template("table.html", units = "US$", colnames = colnames, rows = rows,
 		title = "International Trade: Total Trade with Major Trading Partners",
 		source = "http://bit.ly/2bw6PE8", notes = "Figures include re-exports and re-imports. 2) Countries identified as 'Major Trading Partners' based on 'Cross-Strait Economic Statistics Monthly' published by Mainland Affairs Council")
-
-if __name__ == "__main__":
-	app.run()

@@ -1,0 +1,180 @@
+{% extends "base.html" %}
+{% block content %}
+
+	<!-- TITLE BAR -->
+
+	<nav class="navbar navbar-default" id="searchbar">
+		 <div class="container">
+			<h2 id = "pagetitle"> Test </h2>
+
+		</div>
+	</nav>		<!-- CLOSE TITLE BAR -->
+
+
+
+<div class="container">
+	<h3>Employment Growth Composition</h3>
+
+	<p>X: Employment Shares</p>
+	<p>Y: Employment Growth (CAGR)</p>
+	<p>Size: Employment Size</p>
+
+
+
+
+	<h3>Employment Share and Specialization</h3>
+
+	<p> Measures how specialized a cluster is, and what impact it has on region.</p>
+
+	<p> X: Location Quotient (employment)</p>
+	<p> Y: Employment Shares </p>
+	<p> Size: Employment Size </p> 
+	<br>
+
+	<p><strong>Employment Share and Specialization</strong> provides insight into how unique a cluster is within each region, and how important it is to the regional economy.</p>
+
+	<br>
+
+	<table id="districts">
+        <thead>
+          <th>Employment Share</th>
+          <th>LQ < 1</th>
+          <th>LQ &ge; 1</th>
+          <th>LQ &ge; 2</th>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Share  5% </td>
+            <td>No significance.</td>
+            <td>Specialized cluster, but small regional impact.</td>
+            <td>Highly specialized cluster with small regional impact.</td>
+          </tr>
+          <tr>
+            <td>5% &le; Share < 10% </td>
+            <td>Some regional employment impact.</td>
+            <td>Specialized cluster with some regional impact.</td>
+            <td>Highly specialized cluster with some regional impact.</td>
+          </tr>
+          <tr>
+            <td>Share &ge; 10%</td>
+            <td>High regional impact, but not specialized.</td>
+            <td>Specialized cluster with high regional impact.</td>
+            <td>Highly specialized cluster with high regional impact.</td>
+          </tr>   
+        </tbody>
+    </table>
+    <br>
+
+<h3>Employment Growth and Specialization</h3>
+	<p>X: LQ</p>
+	<p>Y: Growth rate</p>
+	<p>Size: Employent Share</p>
+
+	<br>
+
+	<p><strong>Employment Growth and Specialization</strong> provides insight into how unique a cluster is within a given region, and whether a cluster's competitiveness is growing, stagnating, or declining.</p>
+
+	<br>
+
+		<table id="districts">
+        <thead>
+          <th>Employment Growth</th>
+          <th>LQ < 1</th>
+          <th>LQ &ge; 1</th>
+          <th>LQ &ge; 2</th>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Declining</td>
+            <td>No significance.</td>
+            <td>Specialized cluster losing competitiveness in the city.</td>
+            <td>Highly specialized cluster losing momentum.</td>
+          </tr>
+          <tr>
+            <td>Stagnate</td>
+            <td>No significance.</td>
+            <td>Specialized cluster is stable.</td>
+            <td>Highly specialized cluster is stable.</td>
+          </tr>
+          <tr>
+            <td>Growing</td>
+            <td>May become a specialized cluster.</td>
+            <td>Specialized cluster with high regional impact.</td>
+            <td>Highly specialized cluster with high regional impact.</td>
+          </tr>  
+          <tr>
+            <td>Growing, and over 5% employment share</td>
+            <td>Important regional cluster. May become specialized cluster.</td>
+            <td>Specialized cluster is competitive and regionally important.</td>
+            <td>Highly specialized cluster is regionally important.</td>
+          </tr>  
+          <tr>
+            <td>Growing, and over 10% employment share</td>
+            <td>Highly important regional cluster.</td>
+            <td>Dominant, competitive, and specialized cluster.</td>
+            <td>Dominant, competitive, and highly specialized cluster.</td>
+          </tr>   
+        </tbody>
+    </table>
+
+<br>
+<h3>Revenue Growth and Specialization</h3>
+	<p>X: LQ</p>
+	<p>Y: Revenue growth</p>
+	<p>Size: Revenue share</p>
+
+<br>
+
+		<table id="districts">
+        <thead>
+          <th>Employment Growth</th>
+          <th>LQ < 1</th>
+          <th>1 < LQ &le; 2</th>
+          <th>LQ &ge; 2</th>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Declining</td>
+            <td>No significance.</td>
+            <td>Specialized cluster is losing business.</td>
+            <td>Highly specialized business is losing business.</td>
+          </tr>
+          <tr>
+            <td>Stagnate</td>
+            <td>Regional stable.</td>
+            <td>Specialized cluster is stable.</td>
+            <td>Highly specialized cluster is stable.</td>
+          </tr>
+          <tr>
+            <td>Growing</td>
+            <td>Regional cluster has more orders.</td>
+            <td>Specialized cluster has more orders.</td>
+            <td>Highly specialized cluster has more orders.</td>
+    
+        </tbody>
+    </table>
+
+
+</div>
+
+
+<br>
+  
+</div>
+
+
+<br>
+<br>
+
+
+	
+
+
+
+
+
+
+{% endblock %}

@@ -8,7 +8,7 @@ import dataspecs, copy
 
 def get_sqldata(my_query):
 	"""
-	Function for preparing data from SQLite3 database for chart. 
+	Function for preparing data from SQLite3 database for chart. Returns an SQLite3 row object.
 
 	'my_query' parameter is a valid SQL query to request data from SQLite3 database.
 	"""

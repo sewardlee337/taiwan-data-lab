@@ -1,0 +1,163 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+	<!-- TITLE BAR -->
+
+	<nav class="navbar navbar-default" id="searchbar">
+		 <div class="container">
+			<h2 id = "pagetitle"> IMF World Economic Outlook</h2>
+
+		</div>
+	</nav>		<!-- CLOSE TITLE BAR -->
+
+	 
+
+	<div class="container">
+		
+	  	<br>
+	  	<br>	
+		
+	</div>		
+
+
+
+	<div class = "container">
+
+		<!-- VERTICAL MENU -->
+
+		  <div class="col-md-3">
+		    <div class="sidebar-nav">
+		      <div class="navbar navbar-default" role="navigation">
+		        <div class="navbar-header">
+		          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse">
+		            <span class="sr-only">Toggle navigation</span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		          </button>
+		          <span class="visible-xs navbar-brand">Sidebar menu</span>
+		        </div>
+		        <div class="navbar-collapse collapse sidebar-navbar-collapse">
+		          <ul class="nav navbar-nav">
+
+		          	<!-- National Accounts -->
+		            <li class="dropdown">
+		              <a href="#" class="dropdown-toggle" data-toggle="dropdown">National Accounts <b class="caret"></b></a>
+		              <ul class="dropdown-menu">
+				  			<li><a href="">GDP, constant prices (NT$)</a></li>
+				  			<li><a href="">GDP, constant prices (%&Delta;)</a></li>
+							<li><a href="">GDP, current prices (NT$)</a></li>
+							<li><a href="">GDP, current prices (US$)</a></li>
+							<li><a href="">GDP, deflator</a></li>
+							<li><a href="">GDP per capita, constant prices (NT$)</a></li>
+							<li><a href="">GDP per capita, current prices (NT$)</a></li>
+							<li><a href="">GDP per capita, current prices (US$)</a></li>
+							<li><a href="">GDP based on PPP valuation of country GDP</a></li>
+							<li><a href="">GDP based on PPP per capita GDP</a></li>
+							<li><a href="">GDP based on PPP share of world total</a></li>
+							<li><a href="">Implied PPP conversion rate</a></li>
+							<li><a href="">Total investment</a></li>
+							<li><a href="">Gross national savings</a></li>           
+		              </ul>
+		            </li>
+
+
+		            <!-- Government Finance -->
+		            <li class="dropdown">
+		              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Government Finance <b class="caret"></b></a>
+		              <ul class="dropdown-menu">
+							<li><a href="">General government revenue (NT$)</a></li>
+							<li><a href="">General government revenue (%GDP)</a></li>
+							<li><a href="">General government total expenditure (NT$)</a></li>
+							<li><a href="">General government total expenditure (%GDP)</a></li>
+							<li><a href="">General government net lending/borrowing (NT$)</a></li>
+							<li><a href="">General government net lending/borrowing (%GDP)</a></li>
+							<li><a href="">General government structural balance (NT$)</a></li>
+							<li><a href="">General government structural balance (%GDP)</a></li>
+							<li><a href="">General government net debt (NT$)</a></li>
+							<li><a href="">General government net debt (%GDP)</a></li>
+							<li><a href="">General government gross debt (NT$)</a></li>
+							<li><a href="">General government gross debt (%GDP)</a></li>
+							<li><a href="">GDP by fiscal year, current prices (NT$)</a></li>
+		              </ul>
+		            </li>
+
+
+		            <!-- Monetary -->
+		            <li class="dropdown">
+		              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Monetary <b class="caret"></b></a>
+		              <ul class="dropdown-menu">
+							<li><a href="">Inflation, average consumer prices (Index)</a></li>
+							<li><a href="">Inflation, average consumer prices (%&Delta;)</a></li>
+							<li><a href="">Inflation, end of period consumer prices (Index)</a></li>
+							<li><a href="">Inflation, end of period consumer prices (%&Delta;)</a></li>						
+		              </ul>
+		            </li>
+
+
+		            <!-- Trade -->
+		            <li class="dropdown">
+		              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Trade <b class="caret"></b></a>
+		              <ul class="dropdown-menu">
+							<li><a href="">Volume of imports of goods and services (%&Delta;)</a></li>
+							<li><a href="">Volume of imports of goods (%&Delta;)</a></li>
+							<li><a href="">Volume of exports of goods and services (%&Delta;)</a></li>
+							<li><a href="">Volume of exports of goods (%&Delta;)</a></li>
+		              </ul>
+		            </li>
+
+		          	<!-- People -->
+		            <li class="dropdown">
+		              <a href="#" class="dropdown-toggle" data-toggle="dropdown">People <b class="caret"></b></a>
+		              <ul class="dropdown-menu">
+							<li><a href="">Unemployment rate</a></li>
+							<li><a href="">Employment</a></li>
+							<li><a href="">Population</a></li>
+		              </ul>
+		            </li>
+
+
+
+
+
+		            <!-- Balance of Payments -->
+		            <li class="dropdown">
+		              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Balance of Payments <b class="caret"></b></a>
+		              <ul class="dropdown-menu">
+							<li><a href="">Current account balance (US$)</a></li>
+							<li><a href="">Current account balance (%GDP)</a></li>
+		              </ul>
+		            </li>
+
+
+		          </ul>
+		        </div><!--/.nav-collapse -->
+		      </div>
+		    </div>
+		  
+		 
+		</div> <!-- CLOSE VERTICAL MENU -->
+
+		<div class="col-md-9">
+
+		{% block display %} {% endblock %}
+		</div>
+
+
+
+      	<br>
+      	<br>
+			</div>
+		</div>		<!-- CLOSE TABS -->
+
+		<br>
+		<br>
+
+	</div>
+
+	<br>
+	<br>
+
+{% endblock %}
+
