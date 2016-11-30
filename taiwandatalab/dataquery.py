@@ -1,9 +1,10 @@
 """
 This Python script contains functions to access and manipulate data stored in SQLite3 database.
 """
-from flask import Flask, render_template, request
+from flask import render_template
 import sqlite3 as sql
-import dataspecs, copy
+import dataspecs
+import copy
 
 
 def get_sqldata(my_query):

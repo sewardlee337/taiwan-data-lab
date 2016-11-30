@@ -1,7 +1,8 @@
 from taiwandatalab import app
 
-from flask import Flask, render_template, request, url_for
-import dataspecs, dataquery, urlparse
+from flask import render_template
+import dataspecs
+import dataquery
 
 
 
