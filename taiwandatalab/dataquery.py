@@ -20,7 +20,6 @@ def get_sqldata(my_query):
 	cur.execute(query) 
 
 	return cur.fetchall()
-	con.close()
 
 
 def get_colnames(table, metrics_dict):
@@ -46,7 +45,6 @@ def get_colnames(table, metrics_dict):
 			colnames.append(key)
 			
 	return colnames
-	con.close()
 
 
 def chartjs_input(metrics_dict, sql_rows, chart_title, yaxis, table):
